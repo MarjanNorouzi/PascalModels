@@ -30,7 +30,7 @@ namespace Personal_Information.Validators.SQLValidators
                          RuleFor(x => x.FromDate).Must(BeAvalidDate).WithMessage("Invalid date/time");
                      });
 
-            
+
         }
 
         private bool BeAvalidDate(DateTimeOffset? fromDate)
