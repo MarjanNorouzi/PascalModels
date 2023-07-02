@@ -6,7 +6,7 @@ namespace PascalModels.Models
     {
         public string GroupFrom { get; set; }
         public string GroupTo { get; set; }
-        public short GroupKind { get; set; }
+        public int GroupKind { get; set; }
     }
     public class GroupsListReportRes : Remained
     {
