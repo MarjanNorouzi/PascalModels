@@ -12,6 +12,6 @@
     }
     public class RemainedAccReq : FromSanadNoToNoReq
     {
-        public bool RemainedAcc { get; set; }
+        public bool RemainedAcc { get; set; } = false;
     }
 }

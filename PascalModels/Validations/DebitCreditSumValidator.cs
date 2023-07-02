@@ -26,6 +26,7 @@ namespace PersonalInformation.Validation
                        {
                            RuleFor(x => x.RemainedDebit).NotEmpty();
                            RuleFor(x => x.RemainedCredit).NotEmpty();
+                           Include(new DebitCreditSumValidator());
                        });
         }
     }
