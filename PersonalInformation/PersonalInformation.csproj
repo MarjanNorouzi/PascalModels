@@ -12,55 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Include="obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
-	  <Compile Include="obj\Debug\net7.0\PersonalInformation.AssemblyInfo.cs" />
-	  <Compile Include="obj\Debug\net7.0\PersonalInformation.GlobalUsings.g.cs" />
-	  <Compile Include="obj\Debug\net7.0\PersonalInformation.MvcApplicationPartsAssemblyInfo.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="bin\Debug\net7.0\appsettings.Development.json" />
-	  <Content Include="bin\Debug\net7.0\appsettings.json" />
-	  <Content Include="bin\Debug\net7.0\PersonalInformation.deps.json" />
-	  <Content Include="bin\Debug\net7.0\PersonalInformation.runtimeconfig.json" />
-	  <Content Include="obj\Debug\net7.0\PersonalInformation.csproj.FileListAbsolute.txt" />
-	  <Content Include="obj\Debug\net7.0\staticwebassets.build.json" />
-	  <Content Include="obj\PersonalInformation.csproj.nuget.dgspec.json" />
-	  <Content Include="obj\project.assets.json" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Include="..\.editorconfig" Link=".editorconfig" />
-	  <None Include="bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll" />
-	  <None Include="bin\Debug\net7.0\FluentValidation.dll" />
-	  <None Include="bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll" />
-	  <None Include="bin\Debug\net7.0\Microsoft.OpenApi.dll" />
-	  <None Include="bin\Debug\net7.0\PersonalInformation.dll" />
-	  <None Include="bin\Debug\net7.0\PersonalInformation.exe" />
-	  <None Include="bin\Debug\net7.0\PersonalInformation.pdb" />
-	  <None Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll" />
-	  <None Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
-	  <None Include="bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
-	  <None Include="obj\Debug\net7.0\apphost.exe" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.AssemblyInfoInputs.cache" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.assets.cache" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.csproj.AssemblyReference.cache" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.csproj.BuildWithSkipAnalyzers" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.csproj.CopyComplete" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.csproj.CoreCompileInputs.cache" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.dll" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.GeneratedMSBuildEditorConfig.editorconfig" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.genruntimeconfig.cache" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.MvcApplicationPartsAssemblyInfo.cache" />
-	  <None Include="obj\Debug\net7.0\PersonalInformation.pdb" />
-	  <None Include="obj\Debug\net7.0\refint\PersonalInformation.dll" />
-	  <None Include="obj\Debug\net7.0\ref\PersonalInformation.dll" />
-	  <None Include="obj\Debug\net7.0\staticwebassets\msbuild.build.PersonalInformation.props" />
-	  <None Include="obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.PersonalInformation.props" />
-	  <None Include="obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.PersonalInformation.props" />
-	  <None Include="obj\PersonalInformation.csproj.nuget.g.props" />
-	  <None Include="obj\PersonalInformation.csproj.nuget.g.targets" />
-	  <None Include="obj\project.nuget.cache" />
 	</ItemGroup>
 
 	<ItemGroup>
