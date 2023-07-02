@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using PascalModels.Models;
+using Personal_Information.Validators.SQLValidators;
 
 namespace PascalModels.Validations
 {
@@ -28,8 +29,7 @@ namespace PascalModels.Validations
                        {
                            RuleFor(x => x.GeneralFrom).NotEmpty().MaximumLength(6);
                            RuleFor(x => x.GeneralTo).NotEmpty().MaximumLength(6);
-                           //check new name
-                           //Include(new FromSanadNoToNoReqValidator());
+                           Include(new NumberDateFilterReqValidator());
                        });
         }
     }
