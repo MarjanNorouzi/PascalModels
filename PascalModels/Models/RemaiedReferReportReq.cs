@@ -7,7 +7,7 @@ namespace PascalModels.Models
         public string DetCode { get; set; }
         public string SubCode { get; set; }
     }
-    public class RemainedReferReortRes
+    public class RemainedReferReportRes
     {
         public decimal ArtId { get; set; }
         public decimal SanadNo { get; set; }
