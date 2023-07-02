@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Personal_Information.Models;
+using PascalModels.Models.BaseModels;
 
 namespace Personal_Information.Validators.SQLValidators
 {
