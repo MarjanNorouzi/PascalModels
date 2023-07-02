@@ -1,6 +1,8 @@
 ﻿using FluentValidation;
 using PascalModels.Models.BaseModels;
 
+
+
 namespace Personal_Information.Validators.SQLValidators
 {
     public class FromDateToDateReqValidator : AbstractValidator<FromDateToDateReq>
