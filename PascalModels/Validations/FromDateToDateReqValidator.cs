@@ -67,13 +67,13 @@ namespace Personal_Information.Validators.SQLValidators
                       {
                           RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
                       });
-            When(p =>
-                     (!(string.IsNullOrWhiteSpace(p.NumFrom.ToString()) && string.IsNullOrWhiteSpace(p.NumTo.ToString()))
-                     && ),
-                     () =>
-                     {
-                         RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
-                     });
+            //When(p =>
+            //         (!(string.IsNullOrWhiteSpace(p.NumFrom.ToString()) && string.IsNullOrWhiteSpace(p.NumTo.ToString()))
+            //         && ),
+            //         () =>
+            //         {
+            //             RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
+            //         });
 
         }
     }

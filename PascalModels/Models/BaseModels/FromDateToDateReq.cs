@@ -14,4 +14,4 @@
     {
         public bool RemainedAcc { get; set; } = false;
     }
-}
+} 
