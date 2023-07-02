@@ -19,7 +19,7 @@ namespace Personal_Information.Validators.SQLValidators
                        (string.IsNullOrWhiteSpace(p.GroupFrom) && string.IsNullOrWhiteSpace(p.GroupTo)),
                        () =>
                        {
-                           RuleFor(x => x).NotEmpty().WithMessage("both must be filled('FromGroupNum' And 'ToGroupNum').");
+                           RuleFor(x => x).NotEmpty().WithMessage("both must be filled('GroupFrom' And 'GroupTo').");
                        });
 
             When(p =>
