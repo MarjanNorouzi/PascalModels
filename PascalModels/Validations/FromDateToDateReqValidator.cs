@@ -23,7 +23,14 @@ namespace Personal_Information.Validators.SQLValidators
                           RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
                       });
 
-            RuleFor(x => x.FromDate).Must(BeAvalidDate).WithMessage("Invalid date/time");
+            When(p =>
+                     (p.FromDate is not null && p.ToDate is not null),
+                     () =>
+                     {
+                         RuleFor(x => x.FromDate).Must(BeAvalidDate).WithMessage("Invalid date/time");
+                     });
+
+            
         }
 
         private bool BeAvalidDate(DateTimeOffset? fromDate)
@@ -80,25 +87,12 @@ namespace Personal_Information.Validators.SQLValidators
                                                  });
                                     });
                       });
-
-
-
-
-
-
             When(p =>
                       (p.NumFrom < p.NumTo),
                       () =>
                       {
                           RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
                       });
-            //When(p =>
-            //         (!(string.IsNullOrWhiteSpace(p.NumFrom.ToString()) && string.IsNullOrWhiteSpace(p.NumTo.ToString()))
-            //         && ),
-            //         () =>
-            //         {
-            //             RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
-            //         });
 
         }
     }
