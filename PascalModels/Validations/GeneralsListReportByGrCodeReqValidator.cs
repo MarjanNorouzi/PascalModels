@@ -7,18 +7,9 @@ namespace PascalModels.Validations
     {
         public GeneralsListReportByGrCodeReqValidator()
         {
-            When(p =>
-                       (string.IsNullOrWhiteSpace(p.GrCode)),
-                       () =>
-                       {
-                           RuleFor(x => x.GrCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید");
-                       }).Otherwise(
-                                    () =>
-                                    {
-                                        Include(new NumberDateFilterReqValidator());
-                                        RuleFor(x => x.GrCode).MaximumLength(2);
-                                    });
-
+            RuleFor(x => x.GrCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید");
+            Include(new NumberDateFilterReqValidator());
+            RuleFor(x => x.GrCode).MaximumLength(2);
         }
     }
 }
