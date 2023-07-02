@@ -7,17 +7,9 @@ namespace PascalModels.Validations
     {
         public DetailsListBySubCodeReqValidator()
         {
-            When(p =>
-                    (string.IsNullOrWhiteSpace(p.SubCode)),
-                    () =>
-                    {
-                        RuleFor(x => x.SubCode).NotEmpty().NotNull().NotNull().WithMessage("لطفا کد معین را وارد کنید");
-                    }).Otherwise(
-                                 () =>
-                                 {
-                                     Include(new NumberDateFilterReqValidator());
-                                     RuleFor(x => x.SubCode).MaximumLength(10);
-                                 });
+            Include(new NumberDateFilterReqValidator());
+            RuleFor(x => x.SubCode).NotEmpty().NotNull().WithMessage("لطفا کد معین را وارد کنید");
+            RuleFor(x => x.SubCode).MaximumLength(10);
         }
     }
 }
