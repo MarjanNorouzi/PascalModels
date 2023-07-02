@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using PascalModels.Models;
+using Personal_Information.Validators.SQLValidators;
 
 namespace PascalModels.Validations
 {
@@ -20,8 +21,7 @@ namespace PascalModels.Validations
                        {
                            RuleFor(x => x.GeneralCode).MaximumLength(6).Must(ValidateGenCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد");
                            //General Code Can Be Integer
-                           //check new name
-                           //Include(new FromSanadNoToNoReqValidator());
+                           Include(new NumberDateFilterReqValidator());
                        });
         }
         private bool ValidateGenCode(string generalCode)

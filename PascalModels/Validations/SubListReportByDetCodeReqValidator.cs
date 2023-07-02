@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using PascalModels.Models;
+using Personal_Information.Validators.SQLValidators;
 
 namespace PascalModels.Validations
 {
@@ -18,10 +19,9 @@ namespace PascalModels.Validations
                        (!string.IsNullOrWhiteSpace(p.DetCode)),
                        () =>
                        {
-                           RuleFor(x => x.DetCode).MaximumLength(6).Must(ValidateDetCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد");
-                           //'DetCode' Can Be Integer
-                           //check new name
-                           //Include(new FromSanadNoToNoReqValidator());
+                           RuleFor(x => x.DetCode).MaximumLength(8).Must(ValidateDetCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد");
+                           //'DetCode' Should Be Integer
+                           Include(new NumberDateFilterReqValidator());
                        });
         }
         private bool ValidateDetCode(string detCode)
