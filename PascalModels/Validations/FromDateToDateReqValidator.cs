@@ -93,7 +93,7 @@ namespace Personal_Information.Validators.SQLValidators
                       {
                           RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
                       });
-
+            Include(new FromDateToDateReqValidator());
         }
     }
 }
