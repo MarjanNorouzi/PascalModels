@@ -2,10 +2,6 @@
 
 namespace PersonalInformation.Models
 {
-    /// <summary>
-    ///  title of the operation
-    /// </summary>
-    /// <param name="RefoundRequest"> داخل کلاس.</param>
     public class RefoundRequest : IRequest
     {
         [DefaultValue("1111/11/23")]
