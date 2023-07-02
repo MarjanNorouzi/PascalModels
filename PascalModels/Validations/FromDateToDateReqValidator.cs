@@ -23,43 +23,68 @@ namespace Personal_Information.Validators.SQLValidators
                           RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
                       });
 
-            RuleFor(x => x.FromDate).Must(BeAValidDate).WithMessage("Invalid date/time");
+            RuleFor(x => x.FromDate).Must(BeAvalidDate).WithMessage("Invalid date/time");
         }
 
-        private bool BeAValidDate(DateTimeOffset fromDate)
+        private bool BeAvalidDate(DateTimeOffset? fromDate)
         {
-            DateTimeOffset dt = DateTimeOffset.MinValue;
-            DateTimeOffset.TryParse(fromDate.ToString(), out dt);
-            if(dt ==  DateTimeOffset.MinValue)
+            //DateTimeOffset dt = DateTimeOffset.MinValue;
+            DateTimeOffset.TryParse(fromDate.ToString(), out var dt);
+            if (dt == DateTimeOffset.MinValue)
                 return false;
             return true;
         }
     }
 
-    public class FromSanadNoToNoReqValidator : AbstractValidator<NumberDateFilterReq>
+    public class NumberDateFilterReqValidator : AbstractValidator<NumberDateFilterReq>
     {
-        public FromSanadNoToNoReqValidator()
+        public NumberDateFilterReqValidator()
         {
-            //TODO
+            var msg = "لطفا فقط یکی از موارد بازه تاریخ یا بازه شماره سند را مقداردهی کنید";
             When(p =>
-                      (
-                      (!(string.IsNullOrWhiteSpace(p.NumFrom.ToString()) && string.IsNullOrWhiteSpace(p.NumTo.ToString()))
-                      && !(string.IsNullOrWhiteSpace(p.FromDate.ToString()) || string.IsNullOrWhiteSpace(p.ToDate.ToString())))
-                      ||
-                      (!(string.IsNullOrWhiteSpace(p.FromDate.ToString()) && string.IsNullOrWhiteSpace(p.ToDate.ToString())))
-                      && !(string.IsNullOrWhiteSpace(p.NumFrom.ToString()) || string.IsNullOrWhiteSpace(p.NumTo.ToString()))
-                      ),
+                      !(
+                        (p.NumFrom is not null && p.NumTo is not null)
+                        &&
+                        (p.FromDate is not null && p.ToDate is not null)
+                       ),
                       () =>
                       {
-                          RuleFor(x => x).NotEmpty().WithMessage("only one of the fields must be filled");
+                          RuleFor(x => x).NotEmpty().WithMessage(msg);
+
+                      }).Otherwise(
+                      () =>
+                      {
+                          When(p =>
+                                    !(
+                                      (p.NumFrom is null && p.NumTo is null)
+                                      ||
+                                      (p.NumFrom is not null && p.NumTo is not null)
+                                     ),
+                                    () =>
+                                    {
+                                        //RuleFor(x => x).NotEmpty().WithMessage("both must be filled('FromNum' And 'ToNum').");
+                                        RuleFor(x => x).NotEmpty().WithMessage(msg);
+
+                                    }).Otherwise(
+                                    () =>
+                                    {
+                                        When(p =>
+                                                 !(
+                                                   (p.FromDate is null && p.ToDate is null)
+                                                   ||
+                                                   (p.FromDate is not null && p.ToDate is not null)
+                                                  ),
+                                                 () =>
+                                                 {
+                                                     RuleFor(x => x).NotEmpty().WithMessage(msg);
+                                                 });
+                                    });
                       });
 
-            When(p =>
-                      (string.IsNullOrWhiteSpace(p.NumFrom.ToString()) || string.IsNullOrWhiteSpace(p.NumTo.ToString())),
-                      () =>
-                      {
-                          RuleFor(x => x).NotEmpty().WithMessage("both must be filled('FromNum' And 'ToNum').");
-                      });
+
+
+
+
 
             When(p =>
                       (p.NumFrom < p.NumTo),

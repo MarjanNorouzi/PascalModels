@@ -9,6 +9,13 @@ namespace Personal_Information.Validators.SQLValidators
         public GroupListReqValidator()
         {
             When(p =>
+                       (p.GroupFrom is not null && p.GroupTo is not null),
+                       () =>
+                       {
+                           RuleFor(x => x.GroupFrom).NotEmpty().MaximumLength(2).Must(ValidateGroupNum);
+                           RuleFor(x => x.GroupTo).NotEmpty().MaximumLength(2).Must(ValidateGroupNum);
+                       });
+            When(p =>
                        (Convert.ToInt32(p.GroupFrom) < Convert.ToInt32(p.GroupTo)),
                        () =>
                        {
@@ -28,9 +35,10 @@ namespace Personal_Information.Validators.SQLValidators
                        {
                            RuleFor(x => x.GroupKind).InclusiveBetween(1, 3);
                        });
-            RuleFor(x => x.GroupFrom).NotEmpty().MaximumLength(2);
-            RuleFor(x => x.GroupTo).NotEmpty().MaximumLength(2);
-            
+        }
+        private bool ValidateGroupNum(string generalCode)
+        {
+            return int.TryParse(generalCode, out int x);
         }
     }
 }

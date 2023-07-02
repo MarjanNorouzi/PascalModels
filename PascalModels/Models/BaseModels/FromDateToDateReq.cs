@@ -2,13 +2,13 @@
 {
     public class FromDateToDateReq
     {
-        public DateTimeOffset FromDate { get; set; }
-        public DateTimeOffset ToDate { get; set; }
+        public DateTimeOffset? FromDate { get; set; }
+        public DateTimeOffset? ToDate { get; set; }
     }
     public class NumberDateFilterReq : FromDateToDateReq
     {
-        public int NumFrom { get; set; }
-        public int NumTo { get; set; }
+        public int? NumFrom { get; set; }
+        public int? NumTo { get; set; }
     }
     public class RemainedAccReq : NumberDateFilterReq
     {
