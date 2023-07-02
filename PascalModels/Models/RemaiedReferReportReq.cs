@@ -2,12 +2,12 @@
 
 namespace PascalModels.Models
 {
-    public class RemaiedReferReportReq : FromSanadNoToNoReq
+    public class RemaiedReferReportReq : NumberDateFilterReq
     {
         public string DetCode { get; set; }
         public string SubCode { get; set; }
     }
-    public class RemainedReferReportRes
+    public class RemainedReferReortRes
     {
         public decimal ArtId { get; set; }
         public decimal SanadNo { get; set; }

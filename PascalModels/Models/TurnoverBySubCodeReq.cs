@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Personal_Information.Models.ProcModels
 {
-    public class TurnoverBySubCodeReq : FromSanadNoToNoReq
+    public class TurnoverBySubCodeReq : NumberDateFilterReq
     {
         [StringLength(10)]
         public string SubCode { get; set; }

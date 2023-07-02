@@ -2,12 +2,12 @@
 
 namespace PascalModels.Models
 {
-    public class SubListReportByDetAndSubCodeReq : FromSanadNoToNoReq
+    public class SubListReportByDetAndSubCodeReq : NumberDateFilterReq
     {
         public string DetCode { get; set; }
         public string SubCode { get; set; }
     }
-    public class SubListReportByDetAndSubCodeRes : RemainedReferReportRes
+    public class SubListReportByDetAndSubCodeRes : RemainedReferReortRes
     {
         public int Remained { get; set; }
     }

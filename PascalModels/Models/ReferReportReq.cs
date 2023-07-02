@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Personal_Information.Models.ProcModels
 {
-    public class ReferReportReq : FromSanadNoToNoReq
+    public class ReferReportReq : NumberDateFilterReq
     {
         [StringLength(8)]
         public string DetCode { get; set; }
