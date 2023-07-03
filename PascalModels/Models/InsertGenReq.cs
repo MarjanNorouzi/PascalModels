@@ -6,9 +6,9 @@
         public string GenCode { get; set; }
         public string GenName { get; set; }
     }
-    public class InsertDetReq
+
+    public class EditGenReq : InsertGenReq
     {
-        public string DetCode { get; set; }
-        public string DetName { get; set; }
+        public int GenId { get; set; }
     }
 }
