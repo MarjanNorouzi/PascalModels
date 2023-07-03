@@ -2,7 +2,7 @@
 
 namespace PascalModels.Models
 {
-    public class SubListReportByDetCodeReq : RemainedAccReq
+    public record SubListReportByDetCodeReq : RemainedAccReq
     {
         public string DetCode { get; set; }
     }
@@ -12,7 +12,7 @@ namespace PascalModels.Models
         public string SubName { get; set; }
         public bool HasDetail { get; set; }
     }
-    public class SubListReportByDetCodeTotalRes : TotalRemained
+    public record SubListReportByDetCodeTotalRes : TotalRemained
     {
     }
 }

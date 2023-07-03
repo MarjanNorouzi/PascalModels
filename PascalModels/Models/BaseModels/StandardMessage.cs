@@ -1,6 +1,6 @@
 ﻿namespace PascalModels.Models.BaseModels
 {
-    public class StandardMessage
+    public record StandardMessage
     {
         public int ResultStatus { get; set; }
         public string Message { get; set; }

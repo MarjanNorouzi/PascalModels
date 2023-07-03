@@ -2,18 +2,18 @@
 
 namespace PascalModels.Models
 {
-    public class SubListReportByGenCodeReq : RemainedAccReq
+    public record SubListReportByGenCodeReq : RemainedAccReq
     {
         public string GeneralCode { get; set; }
     }
 
-    public class SubListReportByGenCodeRes : Remained
+    public record SubListReportByGenCodeRes : Remained
     {
         public string SubCode { get; set; }
         public string SubName { get; set; }
         public bool HasDetail { get; set; }
     }
-    public class SubListReportByGenCodeTotalRes : TotalRemained
+    public record SubListReportByGenCodeTotalRes : TotalRemained
     {
     }
 }

@@ -2,17 +2,17 @@
 
 namespace Personal_Information.Models.ProcModels
 {
-    public class TurnoverBySubCodeReq : NumberDateFilterReq
+    public record TurnoverBySubCodeReq : NumberDateFilterReq
     {
         public string SubCode { get; set; }
     }
 
-    public class TurnoverBySubCodeRes : ReferReportRes
+    public record TurnoverBySubCodeRes : ReferReportRes
     {
         public decimal Remained { get; set; }
     }
 
-    public class TurnoverBySubCodeTotalRes : ReferReportTotalRes
+    public record TurnoverBySubCodeTotalRes : ReferReportTotalRes
     {
     }
 }

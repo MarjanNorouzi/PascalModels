@@ -1,16 +1,16 @@
 ﻿using PascalModels.Models.BaseModels;
 
-public class DetailsListBySubCodeReq : RemainedAccReq
+public record DetailsListBySubCodeReq : RemainedAccReq
 {
     public string SubCode { get; set; }
 }
 
-public class DetailsListBySubCodeRes : DebitCreditSum
+public record DetailsListBySubCodeRes : DebitCreditSum
 {
     public string DetCode { get; set; }
     public string DetName { get; set; }
 }
 
-public class DetailsListBySubCodeTotalRes : TotalRemained
+public record DetailsListBySubCodeTotalRes : TotalRemained
 {
 }

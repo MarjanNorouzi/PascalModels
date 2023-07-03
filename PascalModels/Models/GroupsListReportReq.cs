@@ -2,19 +2,19 @@
 
 namespace PascalModels.Models
 {
-    public class GroupsListReportReq : RemainedAccReq
+    public record GroupsListReportReq : RemainedAccReq
     {
         public string GroupFrom { get; set; }
         public string GroupTo { get; set; }
         public int GroupKind { get; set; }
     }
-    public class GroupsListReportRes : Remained
+    public record GroupsListReportRes : Remained
     {
         public string GroupCode { get; set; }
         public string GroupName { get; set; }
         public string GroupKind { get; set; }
     }
-    public class GroupsListReportTotalRes : TotalRemained
+    public record GroupsListReportTotalRes : TotalRemained
     {
     }
 }

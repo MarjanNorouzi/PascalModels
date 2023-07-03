@@ -3,7 +3,7 @@ using PascalModels.Models.BaseModels;
 
 namespace Personal_Information.Models.ProcModels
 {
-    public class ReferReportReq : NumberDateFilterReq
+    public record ReferReportReq : NumberDateFilterReq
     {
         public string DetCode { get; set; }
         public string SubCode { get; set; }
@@ -11,11 +11,11 @@ namespace Personal_Information.Models.ProcModels
 
     }
 
-    public class ReferReportRes : RemainedReferReportRes
+    public record ReferReportRes : RemainedReferReportRes
     {
     }
 
-    public class ReferReportTotalRes : RemainedReferReortTotalRes
+    public record ReferReportTotalRes : RemainedReferReortTotalRes
     {
         public decimal TotalRemained { get; set; }
     }
