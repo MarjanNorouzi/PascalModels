@@ -8,6 +8,9 @@ namespace PascalModels.Validations
     {
         public ReferReportReqValidator()
         {
+            //کد معین و تفصیل نمیتوانند خالی باشند
+            //با استفاده از کد معین و تفصیل گزارش عطف بر  میگردد
+
             When(p =>
                        (string.IsNullOrWhiteSpace(p.DetCode) && string.IsNullOrWhiteSpace(p.SubCode)),
                        () =>
