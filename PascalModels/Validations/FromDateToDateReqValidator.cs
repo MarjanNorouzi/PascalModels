@@ -7,6 +7,7 @@ namespace Personal_Information.Validators.SQLValidators
 {
     public class FromDateToDateReqValidator : AbstractValidator<FromDateToDateReq>
     {
+        //بازه تاریخ
         public FromDateToDateReqValidator()
         {
             When(p =>
@@ -45,6 +46,8 @@ namespace Personal_Information.Validators.SQLValidators
 
     public class NumberDateFilterReqValidator : AbstractValidator<NumberDateFilterReq>
     {
+        //بازه شماره سند 
+        // فقط یکی از موارد بازه تاریخ یا بازه شماره سند باید مشخص شود
         public NumberDateFilterReqValidator()
         {
             var msg = "لطفا فقط یکی از موارد بازه تاریخ یا بازه شماره سند را مقداردهی کنید";
