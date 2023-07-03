@@ -19,8 +19,8 @@ namespace PascalModels.Validations
                        (!string.IsNullOrWhiteSpace(p.GeneralCode)),
                        () =>
                        {
-                           RuleFor(x => x.GeneralCode).MaximumLength(6).Must(ValidateGenCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد");
-                           //General Code Can Be Integer
+                           RuleFor(x => x.GeneralCode).MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد")
+                                                      .Must(ValidateGenCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد"); //General Code Can Be Integer
                            Include(new NumberDateFilterReqValidator());
                        });
         }

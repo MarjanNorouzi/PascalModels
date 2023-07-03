@@ -19,8 +19,8 @@ namespace PascalModels.Validations
                        (!string.IsNullOrWhiteSpace(p.DetCode)),
                        () =>
                        {
-                           RuleFor(x => x.DetCode).MaximumLength(8).Must(ValidateDetCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد");
-                           //'DetCode' Should Be Integer
+                           RuleFor(x => x.DetCode).MaximumLength(8).WithMessage("بیش از 8 کاراکتر مجاز نمی باشد")
+                                                  .Must(ValidateDetCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد"); //'DetCode' Should Be Integer
                            Include(new NumberDateFilterReqValidator());
                        });
         }

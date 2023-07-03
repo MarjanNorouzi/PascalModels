@@ -8,6 +8,7 @@ namespace PascalModels.Validations
     {
         public GeneralsListReportReqValidator()
         {
+            //to do : check if the Convert proccess was wrong, doesnt throw Exception
             When(p =>
                        (Convert.ToInt32(p.GeneralFrom) > Convert.ToInt32(p.GeneralTo)),
                        () =>
@@ -27,8 +28,10 @@ namespace PascalModels.Validations
                        && (Convert.ToInt32(p.GeneralFrom) < Convert.ToInt32(p.GeneralTo))),
                        () =>
                        {
-                           RuleFor(x => x.GeneralFrom).NotEmpty().MaximumLength(6);
-                           RuleFor(x => x.GeneralTo).NotEmpty().MaximumLength(6);
+                           RuleFor(x => x.GeneralFrom).NotEmpty().WithMessage("از کل' نمی تواند خالی باشد'")
+                                                      .MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد");
+                           RuleFor(x => x.GeneralTo).NotEmpty().WithMessage("از کل' نمی تواند خالی باشد'") 
+                                                    .MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد");
                            Include(new NumberDateFilterReqValidator());
                        });
         }

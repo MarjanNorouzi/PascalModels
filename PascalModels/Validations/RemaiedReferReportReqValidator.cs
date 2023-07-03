@@ -19,8 +19,10 @@ namespace PascalModels.Validations
                        (!string.IsNullOrWhiteSpace(p.SubCode) && !string.IsNullOrWhiteSpace(p.DetCode)),
                        () =>
                        {
-                           RuleFor(x => x.SubCode).MaximumLength(10).Must(ValidateCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد"); //'SubCode' Should Be Integer
-                           RuleFor(x => x.DetCode).MaximumLength(8).Must(ValidateCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد"); //'DetCode' Should Be Integer
+                           RuleFor(x => x.SubCode).MaximumLength(10).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد")
+                                                  .Must(ValidateCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد"); //'SubCode' Should Be Integer
+                           RuleFor(x => x.DetCode).MaximumLength(8).WithMessage("بیش از 8 کاراکتر مجاز نمی باشد")
+                                                  .Must(ValidateCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد"); //'DetCode' Should Be Integer
                            Include(new NumberDateFilterReqValidator());
                        });
 
@@ -28,7 +30,8 @@ namespace PascalModels.Validations
                       (!string.IsNullOrWhiteSpace(p.SubCode) && string.IsNullOrWhiteSpace(p.DetCode)),
                       () =>
                       {
-                          RuleFor(x => x.SubCode).MaximumLength(10).Must(ValidateCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد"); //'SubCode' Should Be Integer
+                          RuleFor(x => x.SubCode).MaximumLength(10).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد")
+                                                 .Must(ValidateCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد"); //'SubCode' Should Be Integer
                           Include(new NumberDateFilterReqValidator());
                       });
         }
