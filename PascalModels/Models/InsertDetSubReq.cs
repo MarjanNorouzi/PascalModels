@@ -1,12 +1,12 @@
 ﻿namespace PascalModels.Models
 {
-    public class InsertDetSubReq
+    public record InsertDetSubReq
     {
         public string DetCode { get; set; }
         public string SubCodes { get; set; }
     }
 
-    public class EditDetSubReq : InsertDetReq
+    public record EditDetSubReq : InsertDetSubReq
     {
         public int DetSubId { get; set; }
     }
