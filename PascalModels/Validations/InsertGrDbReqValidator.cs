@@ -3,9 +3,10 @@ using PascalModels.Models;
 
 namespace PascalModels.Validations
 {
-    public class InsertToGrDbReqValidator : AbstractValidator<InsertToGrDbReq>
+    public class InsertGrDbReqValidator : AbstractValidator<InsertGrDbReq>
     {
-        public InsertToGrDbReqValidator()
+        //همه موارد باید مقداردهی شوند
+        public InsertGrDbReqValidator()
         {
             RuleFor(x => x.GrCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید")
                                   .MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد")

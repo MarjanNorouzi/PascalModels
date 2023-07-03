@@ -3,9 +3,10 @@ using PascalModels.Models;
 
 namespace PascalModels.Validations
 {
-    public class InsertToSubDbReqValidator : AbstractValidator<InsertToSubDbReq>
+    public class InsertSubDbReqValidator : AbstractValidator<InsertSubDbReq>
     {
-        public InsertToSubDbReqValidator()
+        //همه موارد باید مقداردهی شوند
+        public InsertSubDbReqValidator()
         {
             RuleFor(x => x.GenCode).NotEmpty().NotNull().WithMessage("لطفا نام کل را وارد کنید")
                                    .MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد")

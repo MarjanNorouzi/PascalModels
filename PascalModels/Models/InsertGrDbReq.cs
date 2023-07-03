@@ -1,6 +1,6 @@
 ﻿namespace PascalModels.Models
 {
-    public class InsertToGrDbReq
+    public class InsertGrDbReq
     {
         public string GrCode { get; set; }
         public string GrName { get; set; }
@@ -8,7 +8,7 @@
 
     }
 
-    public class EditGrDbReq : InsertToGrDbReq
+    public class EditGrDbReq : InsertGrDbReq
     {
         public int GrId { get; set; }
     }
