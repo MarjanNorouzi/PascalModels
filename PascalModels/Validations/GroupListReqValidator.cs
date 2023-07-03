@@ -11,8 +11,10 @@ namespace Personal_Information.Validators.SQLValidators
                        (p.GroupFrom is not null && p.GroupTo is not null),
                        () =>
                        {
-                           RuleFor(x => x.GroupFrom).NotEmpty().MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد").Must(ValidateGroupNum);
-                           RuleFor(x => x.GroupTo).NotEmpty().MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد").Must(ValidateGroupNum);
+                           RuleFor(x => x.GroupFrom).NotEmpty().MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد").Must(ValidateGroupNum)
+                           .WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد");
+                           RuleFor(x => x.GroupTo).NotEmpty().MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد").Must(ValidateGroupNum)
+                           .WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد");
                        });
             When(p =>
                        (Convert.ToInt32(p.GroupFrom) < Convert.ToInt32(p.GroupTo)),
@@ -35,9 +37,9 @@ namespace Personal_Information.Validators.SQLValidators
                            RuleFor(x => x.GroupKind).InclusiveBetween(1, 3).WithMessage("خارج از بازه ی 1 تا 3 مجاز نمی باشد");
                        });
         }
-        private bool ValidateGroupNum(string generalCode)
+        private bool ValidateGroupNum(string grCode)
         {
-            return int.TryParse(generalCode, out int x);
+            return int.TryParse(grCode, out int x);
         }
     }
 }

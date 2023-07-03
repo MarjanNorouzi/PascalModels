@@ -13,4 +13,10 @@ namespace PascalModels.Models
         public int Grkind { get; set; }
 
     }
+
+    public class EditGrDbReq : InsertToGrDbReq 
+    {
+        public int GrId { get; set; }
+    }
+
 }
