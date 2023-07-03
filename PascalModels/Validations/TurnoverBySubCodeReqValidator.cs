@@ -10,7 +10,7 @@ namespace PascalModels.Validations
         {
             Include(new NumberDateFilterReqValidator());
             RuleFor(x => x.SubCode).NotEmpty().NotNull().WithMessage("لطفا کد معین را وارد کنید");
-            RuleFor(x => x.SubCode).MaximumLength(10);            
+            RuleFor(x => x.SubCode).MaximumLength(10).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد");
         }
     }
 }

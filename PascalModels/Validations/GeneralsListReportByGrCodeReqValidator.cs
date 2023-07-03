@@ -9,7 +9,7 @@ namespace PascalModels.Validations
         {
             RuleFor(x => x.GrCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید");
             Include(new NumberDateFilterReqValidator());
-            RuleFor(x => x.GrCode).MaximumLength(2);
+            RuleFor(x => x.GrCode).MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد");
         }
     }
 }

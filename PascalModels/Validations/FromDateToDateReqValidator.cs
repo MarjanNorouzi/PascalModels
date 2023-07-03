@@ -13,14 +13,14 @@ namespace Personal_Information.Validators.SQLValidators
                       (string.IsNullOrWhiteSpace(p.FromDate.ToString()) || string.IsNullOrWhiteSpace(p.ToDate.ToString())),
                       () =>
                       {
-                          RuleFor(x => x).NotEmpty().WithMessage("both must be filled('FromDate' And 'ToDate').");
+                          RuleFor(x => x).NotEmpty().WithMessage("هر دو فیلد بازه باید مشخص شود");
                       });
 
             When(p =>
                       (p.FromDate < p.ToDate),
                       () =>
                       {
-                          RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
+                          RuleFor(x => x).NotEmpty().WithMessage("بازه وارد شده صحیح نمی باشد");
                       });
 
             When(p =>
@@ -69,8 +69,8 @@ namespace Personal_Information.Validators.SQLValidators
                                      ),
                                     () =>
                                     {
-                                        //RuleFor(x => x).NotEmpty().WithMessage("both must be filled('FromNum' And 'ToNum').");
                                         RuleFor(x => x).NotEmpty().WithMessage(msg);
+                                        //"both must be filled('FromNum' And 'ToNum')."
 
                                     }).Otherwise(
                                     () =>
@@ -91,9 +91,10 @@ namespace Personal_Information.Validators.SQLValidators
                       (p.NumFrom < p.NumTo),
                       () =>
                       {
-                          RuleFor(x => x).NotEmpty().WithMessage("the selected range is incorrect.");
+                          RuleFor(x => x).NotEmpty().WithMessage("بازه وارد شده صحیح نمی باشد");
                       });
             Include(new FromDateToDateReqValidator());
         }
     }
 }
+
