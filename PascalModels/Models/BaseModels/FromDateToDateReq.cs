@@ -1,6 +1,6 @@
 ﻿namespace PascalModels.Models.BaseModels
 {
-    public class FromDateToDateReq
+    public class FromDateToDateReq : BaseModel, IBaseModel
     {
         public DateTimeOffset? FromDate { get; set; }
         public DateTimeOffset? ToDate { get; set; }
@@ -14,4 +14,4 @@
     {
         public bool RemainedAcc { get; set; } = false;
     }
-} 
+}

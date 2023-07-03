@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using PascalModels.Models.BaseModels;
-
-
+using PascalModels.Validations;
 
 namespace Personal_Information.Validators.SQLValidators
 {
@@ -69,8 +68,7 @@ namespace Personal_Information.Validators.SQLValidators
                                      ),
                                     () =>
                                     {
-                                        RuleFor(x => x).NotEmpty().WithMessage(msg);
-                                        //"both must be filled('FromNum' And 'ToNum')."
+                                        RuleFor(x => x).NotEmpty().WithMessage(msg); //"both must be filled('FromNum' And 'ToNum')."
 
                                     }).Otherwise(
                                     () =>
@@ -94,6 +92,7 @@ namespace Personal_Information.Validators.SQLValidators
                           RuleFor(x => x).NotEmpty().WithMessage("بازه وارد شده صحیح نمی باشد");
                       });
             Include(new FromDateToDateReqValidator());
+            Include(new BaseModelValidation());
         }
     }
 }
