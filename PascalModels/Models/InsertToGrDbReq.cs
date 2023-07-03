@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PascalModels.Models
+﻿namespace PascalModels.Models
 {
     public class InsertToGrDbReq
     {
@@ -14,7 +8,7 @@ namespace PascalModels.Models
 
     }
 
-    public class EditGrDbReq : InsertToGrDbReq 
+    public class EditGrDbReq : InsertToGrDbReq
     {
         public int GrId { get; set; }
     }
