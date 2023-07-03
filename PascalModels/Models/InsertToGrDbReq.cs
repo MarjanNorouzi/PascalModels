@@ -13,4 +13,8 @@
         public int GrId { get; set; }
     }
 
+    public class DeleteGrDbReq
+    {
+
+    }
 }

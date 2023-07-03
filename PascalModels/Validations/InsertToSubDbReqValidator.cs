@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using PascalModels.Models;
 
 namespace PascalModels.Validations
 {
