@@ -1,6 +1,6 @@
 ﻿namespace PascalModels.Models
 {
-    public class InsertSubDbReq
+    public record InsertSubDbReq
     {
         public string GenCode { get; set; }
         public string SubCode { get; set; }
@@ -8,7 +8,7 @@
         public bool DetKind { get; set; }
     }
 
-    public class EditSubDbReq : InsertSubDbReq
+    public record EditSubDbReq : InsertSubDbReq
     {
         public int SubId { get; set; }
     }

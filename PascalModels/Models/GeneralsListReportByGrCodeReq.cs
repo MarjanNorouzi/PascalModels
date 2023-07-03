@@ -1,16 +1,16 @@
 ﻿using PascalModels.Models.BaseModels;
 
-public class GeneralsListReportByGrCodeReq : RemainedAccReq
+public record GeneralsListReportByGrCodeReq : RemainedAccReq
 {
     public string GrCode { get; set; }
 }
 
-public class GeneralsListReportByGrCodeRes : DebitCreditSum
+public record GeneralsListReportByGrCodeRes : DebitCreditSum
 {
     public int GenCode { get; set; }
     public int GenName { get; set; }
 }
 
-public class GeneralsListReportByGrCodeTotalRes : TotalRemained
+public record GeneralsListReportByGrCodeTotalRes : TotalRemained
 {
 }

@@ -2,12 +2,12 @@
 
 namespace PascalModels.Models
 {
-    public class RemaiedReferReportReq : NumberDateFilterReq
+    public record RemaiedReferReportReq : NumberDateFilterReq
     {
         public string DetCode { get; set; }
         public string SubCode { get; set; }
     }
-    public class RemainedReferReportRes
+    public record RemainedReferReportRes
     {
         public decimal ArtId { get; set; }
         public decimal SanadNo { get; set; }
@@ -18,7 +18,7 @@ namespace PascalModels.Models
         public decimal Credit { get; set; }
         public string Tashkhis { get; set; }
     }
-    public class RemainedReferReortTotalRes : TotalDebitCredit
+    public record RemainedReferReortTotalRes : TotalDebitCredit
     {
         public string Tashkhis { get; set;}
     }

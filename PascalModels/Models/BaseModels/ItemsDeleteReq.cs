@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PascalModels.Models.BaseModels
 {
-    public class ItemsDeleteReq
+    public record ItemsDeleteReq
     {
         public IEnumerable<int> Ids { get; set; }
     }

@@ -1,6 +1,8 @@
-﻿namespace Personal_Information.Models.ProcModels
+﻿using PascalModels.Models.BaseModels;
+
+namespace Personal_Information.Models.ProcModels
 {
-    public class GetFilterParametersRangeRes
+    public record GetFilterParametersRangeRes 
     {
         public string GrpMin { get; set; }
         public string GrpMax { get; set; }

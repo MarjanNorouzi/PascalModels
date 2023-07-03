@@ -6,7 +6,7 @@
         public int FinancialYear { get; set; }
     }
 
-    public class BaseModel
+    public record BaseModel
     {
         public int CompanyCode { get; set; }
         public int FinancialYear { get; set; }

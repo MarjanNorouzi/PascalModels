@@ -2,17 +2,17 @@
 
 namespace PascalModels.Models
 {
-    public class SubListReportByDetCodeReq : RemainedAccReq
+    public record SubListReportByDetCodeReq : RemainedAccReq
     {
         public string DetCode { get; set; }
     }
-    public class SubListReportByDetCodeRes : Remained
+    public record SubListReportByDetCodeRes : Remained
     {
         public string SubCode { get; set; }
         public string SubName { get; set; }
         public bool HasDetail { get; set; }
     }
-    public class SubListReportByDetCodeTotalRes : TotalRemained
+    public record SubListReportByDetCodeTotalRes : TotalRemained
     {
     }
 }
