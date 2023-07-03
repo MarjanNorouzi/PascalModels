@@ -3,14 +3,14 @@ using PascalModels.Models.BaseModels;
 
 namespace PascalModels.Validations
 {
-    public class BaseModelValidation : AbstractValidator<BaseModel>
+    public class BaseModelValidator : AbstractValidator<BaseModel>
     {
-        public BaseModelValidation()
+        public BaseModelValidator()
         {
             RuleFor(x => x.CompanyCode).NotEmpty().NotNull().WithMessage("کد کمپانی نمی تواند خالی باشد")
                                        .Must(NumberValidation).WithMessage("کد کمپانی باید دو رقمی باشد");
 
-            RuleFor(x => x.FinancialYear).NotEmpty().NotNull().WithMessage("سال مالین نمی تواند خالی باشد")
+            RuleFor(x => x.FinancialYear).NotEmpty().NotNull().WithMessage("سال مالی نمی تواند خالی باشد")
                                          .Must(NumberValidation).WithMessage("سال مالی باید دو رقمی باشد");
         }
 
