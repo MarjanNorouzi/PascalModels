@@ -8,6 +8,7 @@ namespace PascalModels.Validations
     {
         public ReferReportReqValidator()
         {
+            //گزارش عطف
             //کد معین و تفصیل نمیتوانند خالی باشند
             //با استفاده از کد معین و تفصیل گزارش عطف بر  میگردد
             RuleFor(x => x.SubCode)
