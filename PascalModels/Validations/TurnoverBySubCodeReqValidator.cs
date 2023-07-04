@@ -14,12 +14,12 @@ namespace PascalModels.Validations
         {
             Include(new NumberDateFilterReqValidator());
             RuleFor(x => x.SubCode).NotEmpty().NotNull().WithMessage("لطفا کد معین را وارد کنید")
-                                   .MaximumLength(10).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد")
+                                   .Length(6,6).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد")
                                    .Must(ValidateSubCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد");
         }
         private bool ValidateSubCode(string subCode)
         {
-            return int.TryParse(subCode, out int b);
+            return int.TryParse(subCode, out _);
         }
     }
 }

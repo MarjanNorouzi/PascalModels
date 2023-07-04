@@ -10,11 +10,11 @@ namespace Personal_Information.Validators.SQLValidators
         //گزارش گروه ها
         public GroupListReqValidator()
         {
-            RuleFor(x => x.GroupFrom).Length(2, 2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد")
+            RuleFor(x => x.GroupFrom).Length(2, 2).WithMessage("تعداد 2 کاراکتر مجاز می باشد")
                                      .Must(ValidateGroupNum).WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد")
                                      .LessThanOrEqualTo(x => x.GroupTo).WithMessage("بازه وارد شده صحیح نمی باشد"); //"the selected range is incorrect.";
 
-            RuleFor(x => x.GroupTo).Length(2, 2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد")
+            RuleFor(x => x.GroupTo).Length(2, 2).WithMessage("تعداد 2 کاراکتر مجاز می باشد")
                                    .Must(ValidateGroupNum).WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد");
 
             When(p => p.GroupKind is not null,
