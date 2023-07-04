@@ -32,7 +32,6 @@ namespace Personal_Information.Validators.SQLValidators
 
         private bool BeAvalidDate(DateTimeOffset? fromDate)
         {
-            //DateTimeOffset dt = DateTimeOffset.MinValue;
             DateTimeOffset.TryParse(fromDate.ToString(), out var dt);
             if (dt == DateTimeOffset.MinValue)
                 return false;

@@ -1,8 +1,3 @@
-using FluentValidation;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Mvc.Filters;
-using PersonalInformation.Filters;
-
 var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddControllers();

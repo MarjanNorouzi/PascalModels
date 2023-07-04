@@ -19,7 +19,7 @@ namespace PascalModels.Validations
                                                       .MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد")
                                                       .Must(ValidateCode).WithMessage("مقدار 'از کل' فقط می تواند عدد صحیح باشد")
                                                       .LessThanOrEqualTo(x => x.GeneralTo).WithMessage("بازه ی انتخابی صحیح نمی باشد."); //the selected range is incorrect.;
-                           
+
                            RuleFor(x => x.GeneralTo).NotEmpty().WithMessage("از کل' نمی تواند خالی باشد'")
                                                     .MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد")
                                                     .Must(ValidateCode).WithMessage("مقدار 'از کل' فقط می تواند عدد صحیح باشد");

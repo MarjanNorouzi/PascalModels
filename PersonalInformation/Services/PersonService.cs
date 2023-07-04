@@ -12,10 +12,10 @@ namespace PersonalInformation.Services
         public Person? Get()
         {
             var employee = _persons.FirstOrDefault();
-            
+
             if (employee == null)
                 return null;
-            
+
             return employee;
         }
 
