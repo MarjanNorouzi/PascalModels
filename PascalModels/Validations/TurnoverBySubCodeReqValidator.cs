@@ -14,7 +14,7 @@ namespace PascalModels.Validations
         {
             Include(new NumberDateFilterReqValidator());
             RuleFor(x => x.SubCode).NotEmpty().NotNull().WithMessage("لطفا کد معین را وارد کنید")
-                                   .Length(6,6).WithMessage("تعداد 6 کاراکتر مجاز می باشد")
+                                   .Length(6, 6).WithMessage("تعداد 6 کاراکتر مجاز می باشد")
                                    .Must(ValidateSubCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد");
         }
         private bool ValidateSubCode(string subCode)

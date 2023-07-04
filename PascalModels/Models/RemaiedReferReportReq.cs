@@ -20,6 +20,6 @@ namespace PascalModels.Models
     }
     public record RemainedReferReortTotalRes : TotalDebitCredit
     {
-        public string Tashkhis { get; set;}
+        public string Tashkhis { get; set; }
     }
 }
