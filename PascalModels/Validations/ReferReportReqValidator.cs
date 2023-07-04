@@ -12,13 +12,6 @@ namespace PascalModels.Validations
             //با استفاده از کد معین و تفصیل گزارش عطف بر  میگردد
 
             When(p =>
-                       (string.IsNullOrWhiteSpace(p.DetCode) && string.IsNullOrWhiteSpace(p.SubCode)),
-                       () =>
-                       {
-                           RuleFor(x => x).NotEmpty().WithMessage("هر دو مقدار کد معین و تفصیل باید وارد شوند"); //Both 'DetCode' And 'SubCode' should be filled
-                       });
-
-            When(p =>
                        (!string.IsNullOrWhiteSpace(p.DetCode) && !string.IsNullOrWhiteSpace(p.SubCode)),
                        () =>
                        {
@@ -28,6 +21,9 @@ namespace PascalModels.Validations
                                                   .Must(ValidateCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد"); //'SubCode' Should Be Integer
                            RuleFor(x => x.Refer).MaximumLength(10).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد");
                            Include(new NumberDateFilterReqValidator());
+                       }).Otherwise(() =>
+                       {
+                           RuleFor(x => x).NotEmpty().WithMessage("هر دو مقدار کد معین و تفصیل باید وارد شوند"); //Both 'DetCode' And 'SubCode' should be filled
                        });
         }
 
