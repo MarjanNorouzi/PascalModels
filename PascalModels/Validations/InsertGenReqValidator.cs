@@ -10,13 +10,13 @@ namespace PascalModels.Validations
             RuleFor(x => x.GroupCode)
                 .NotEmpty().NotNull().WithMessage("کد گروه نمی تواند خالی باشد")
                 .Length(2, 2).WithMessage("کد گروه باید 2 رقم باشد")
-                .Must(ValidateCode).WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد");
+                .Must(ValidateCode).WithMessage("مقدار کد گروه فقط می تواند شامل اعداد باشد");
 
 
             RuleFor(x => x.GenCode)
                 .NotEmpty().NotNull().WithMessage("کد کل نمی تواند خالی باشد")
                 .Length(4,4).WithMessage("کد کل باید 4 رقم باشد")
-                .Must(ValidateCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد");
+                .Must(ValidateCode).WithMessage("مقدار کد کل فقط می تواند شامل اعداد باشد");
 
             RuleFor(x => x.GenName)
                 .NotEmpty().NotNull().WithMessage("نام کل نمی تواند خالی باشد")

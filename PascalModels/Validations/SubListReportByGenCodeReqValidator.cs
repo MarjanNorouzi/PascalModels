@@ -13,7 +13,7 @@ namespace PascalModels.Validations
             RuleFor(x => x.GeneralCode)
                 .NotEmpty().WithMessage("کد کل را وارد کنید") //Insert 'GeneralCode'.
                 .Length(4, 4).WithMessage("کد کل' باید 4 رقم باشد'")
-                .Must(ValidateGenCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد"); //General Code Can Be Integer
+                .Must(ValidateGenCode).WithMessage("مقدار کد کل فقط می تواند شامل اعداد باشد"); //General Code Can Be Integer
 
             Include(new NumberDateFilterReqValidator());
         }

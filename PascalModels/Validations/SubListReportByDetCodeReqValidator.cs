@@ -13,7 +13,7 @@ namespace PascalModels.Validations
             RuleFor(x => x.DetCode)
                 .NotEmpty().WithMessage("'کد تفصیل' نمیتواند خالی باشد") //Insert 'DetCode'.
                 .Length(4, 4).WithMessage("کد تفصیل' باید 4 رقم باشد'")
-                .Must(ValidateDetCode).WithMessage("مقدار کد تفصیلی فقط می تواند عدد صحیح باشد"); //'DetCode' Should Be Integer
+                .Must(ValidateDetCode).WithMessage("مقدار کد تفصیل فقط می تواند شامل اعداد باشد"); //'DetCode' Should Be Integer
 
             Include(new NumberDateFilterReqValidator());
         }
