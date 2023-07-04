@@ -6,7 +6,8 @@ namespace PascalModels.Validations
     public class GeneralsListReportByGrCodeReqValidator : AbstractValidator<GeneralsListReportByGrCodeReq>
     {
         //با استفاده از  کد گروه یک لیست از کل با جمع بدهکار و بستانکار و مانده برمیگردد
-        //کد گروه نمیتواند خالی باشد
+        //کد گروه نمیتواند خالی باشد و همچنین باید شامل 2 عدد باشد
+        //دارای فیلتر حساب های مانده دار نیز می باشد
         public GeneralsListReportByGrCodeReqValidator()
         {
             RuleFor(x => x.GrCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید")

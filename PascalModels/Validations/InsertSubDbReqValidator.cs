@@ -5,7 +5,7 @@ namespace PascalModels.Validations
 {
     public class InsertSubDbReqValidator : AbstractValidator<InsertSubDbReq>
     {
-        //همه موارد باید مقداردهی شوند
+        //همه موارد(کد کل شامل 4 رقم)و(کد معین شامل 6 رقم)و(نام معین که شامل کاراکتر میباشد)و(نوع تفصیل) باید مقداردهی شوند
         public InsertSubDbReqValidator()
         {
             RuleFor(x => x.GenCode).NotEmpty().NotNull().WithMessage("لطفا نام کل را وارد کنید")
@@ -19,7 +19,7 @@ namespace PascalModels.Validations
             RuleFor(x => x.SubName).NotEmpty().NotNull().WithMessage("لطفا نام معین را وارد کنید")
                 .MaximumLength(50).WithMessage("بیش از 50 کاراکتر مجاز نمی باشد");
 
-            RuleFor(x => x.DetKind).NotEmpty().NotNull().WithMessage("لطفا نوع تفضیل را وارد کنید");
+            RuleFor(x => x.DetKind).NotEmpty().NotNull().WithMessage("لطفا نوع تفصیل را وارد کنید");
         }
         private bool ValidateCode(string Code)
         {
