@@ -7,17 +7,19 @@ namespace PascalModels.Validations
     {
         public InsertDetReqValidator()
         {
-            RuleFor(x => x.DetCode).NotEmpty().NotNull().WithMessage("لطفا کد تفصیل را وارد کنید")
-                                   .MaximumLength(6).WithMessage("بیش از 8 کاراکتر مجاز نمی باشد")
-                                   .Must(ValidateCode).WithMessage("مقدار کد تفصیل فقط می تواند عدد صحیح باشد");
+            RuleFor(x => x.DetCode)
+                .NotEmpty().NotNull().WithMessage("کد تفصیل نمی تواند خالی باشد")
+                .Length(4, 4).WithMessage("کد تفصیل باید 4 رقم باشد")
+                .Must(ValidateCode).WithMessage("مقدار کد تفصیل فقط می تواند عدد صحیح باشد");
 
-            RuleFor(x => x.DetName).NotEmpty().NotNull().WithMessage("لطفا نام تفصیل را وارد کنید")
-                                   .MaximumLength(50).WithMessage("بیش از 50 کاراکتر مجاز نمی باشد");
+            RuleFor(x => x.DetName)
+                .NotEmpty().NotNull().WithMessage("نام تفصیل نمی تواند خالی باشد")
+                .MaximumLength(50).WithMessage("بیش از 50 کاراکتر مجاز نمی باشد");
         }
 
-        private bool ValidateCode(string Code)
+        private bool ValidateCode(string code)
         {
-            return int.TryParse(Code, out int _);
+            return int.TryParse(code, out _);
         }
     }
 }
