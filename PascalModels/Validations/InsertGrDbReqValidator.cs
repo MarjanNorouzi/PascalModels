@@ -5,6 +5,7 @@ namespace PascalModels.Validations
 {
     public class InsertGrDbReqValidator : AbstractValidator<InsertGrDbReq>
     {
+        //افزودن گروه
         //همه موارد(کد گروه شامل 2 عدد)و(نام گروه که شامل کاراکتر میباشد)و(نوع گروه) باید مقداردهی شوند
         public InsertGrDbReqValidator()
         {

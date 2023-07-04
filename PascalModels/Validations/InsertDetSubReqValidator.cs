@@ -6,6 +6,7 @@ namespace PascalModels.Validations
 {
     public class InsertDetSubReqValidator : AbstractValidator<InsertDetSubReq>
     {
+        //افزودن معین و تفصیل
         public InsertDetSubReqValidator()
         {
             RuleFor(x => x.DetCode)

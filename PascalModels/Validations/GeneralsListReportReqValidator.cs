@@ -8,8 +8,11 @@ namespace PascalModels.Validations
     {
         public GeneralsListReportReqValidator()
         {
-            //بازه ی کد جنرال باید مشخص شود
+            //لیست کل
             //با استفاده از بازه ی کد جنرال یک لیست بر  میگردد
+            //بازه ی کد جنرال باید مشخص شود
+            //کدهای مقداردهی شده در بازه ی کل باید شامل 4 رقم باشد
+            //دارای فیلتر حساب های مانده دار نیز می باشد
 
             RuleFor(x => x.GeneralFrom).NotEmpty().WithMessage("از کل' نمی تواند خالی باشد'")
                 .Length(4, 4).WithMessage("کد کل' باید 4 رقم باشد'")

@@ -9,7 +9,7 @@ namespace PascalModels.Validations
         public ReferReportReqValidator()
         {
             //گزارش عطف
-            //کد معین و تفصیل نمیتوانند خالی باشند
+            //کد معین و تفصیل نمیتوانند خالی باشند و همچنین کد معین باید شامل 6 رقم و کد تفصیل شامل 4 رقم باشد
             //با استفاده از کد معین و تفصیل گزارش عطف بر  میگردد
             RuleFor(x => x.SubCode)
                 .NotEmpty().WithMessage("کد معین نمی تواند خالی باشد")
