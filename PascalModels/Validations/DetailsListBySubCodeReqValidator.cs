@@ -16,7 +16,7 @@ namespace PascalModels.Validations
         }
         private bool ValidateSubCode(string subCode)
         {
-            return int.TryParse(subCode, out int b);
+            return int.TryParse(subCode, out _);
         }
     }
 }
