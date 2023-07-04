@@ -7,22 +7,25 @@ namespace PascalModels.Validations
     {
         public InsertGenReqValidator()
         {
-            RuleFor(x => x.GroupCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید")
-                                     .MaximumLength(2).WithMessage("بیش از 2 کاراکتر مجاز نمی باشد")
-                                     .Must(ValidateCode).WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد");
+            RuleFor(x => x.GroupCode)
+                .NotEmpty().NotNull().WithMessage("کد گروه نمی تواند خالی باشد")
+                .Length(2, 2).WithMessage("کد گروه باید 2 رقم باشد")
+                .Must(ValidateCode).WithMessage("مقدار کد گروه فقط می تواند عدد صحیح باشد");
 
 
-            RuleFor(x => x.GenCode).NotEmpty().NotNull().WithMessage("لطفا کد کل را وارد کنید")
-                                   .MaximumLength(6).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد")
-                                   .Must(ValidateCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد");
+            RuleFor(x => x.GenCode)
+                .NotEmpty().NotNull().WithMessage("کد کل نمی تواند خالی باشد")
+                .Length(4,4).WithMessage("کد کل باید 4 رقم باشد")
+                .Must(ValidateCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد");
 
-            RuleFor(x => x.GenName).NotEmpty().NotNull().WithMessage("لطفا نام کل را وارد کنید")
-                                   .MaximumLength(50).WithMessage("بیش از 50 کاراکتر مجاز نمی باشد");
+            RuleFor(x => x.GenName)
+                .NotEmpty().NotNull().WithMessage("نام کل نمی تواند خالی باشد")
+                .MaximumLength(50).WithMessage("بیش از 50 کاراکتر مجاز نمی باشد");
         }
 
-        private bool ValidateCode(string Code)
+        private bool ValidateCode(string code)
         {
-            return int.TryParse(Code, out int _);
+            return int.TryParse(code, out _);
         }
     }
 }

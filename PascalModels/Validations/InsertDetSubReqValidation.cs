@@ -8,18 +8,21 @@ namespace PascalModels.Validations
     {
         public InsertDetSubReqValidation()
         {
-            RuleFor(x => x.DetCode).NotEmpty().NotNull().WithMessage("لطفا کد تفصیل را وارد کنید")
-                                   .MaximumLength(6).WithMessage("بیش از 8 کاراکتر مجاز نمی باشد")
-                                   .Must(ValidateCode).WithMessage("مقدار کد تفصیل فقط می تواند عدد صحیح باشد");
+            RuleFor(x => x.DetCode)
+                .NotEmpty().NotNull().WithMessage("کد تفصیل نمی تواند خالی باشد")
+                .Length(4, 4).WithMessage("کد تفصیل باید 4 رقم باشد")
+                .Must(ValidateCode).WithMessage("مقدار کد تفصیل فقط می تواند عدد صحیح باشد");
 
-            RuleFor(x => x.SubCodes).NotEmpty().NotNull().WithMessage("لطفا کدهای معین را وارد کنید")
-                                    .Must(ValidateSubCodes).WithMessage("مقدار کدهای معین فقط می تواند عددهای صحیح جدا شده با(,) باشد");
+            RuleFor(x => x.SubCodes)
+                .NotEmpty().NotNull().WithMessage("کد های معین نمیتوانند خالی باشند")
+                .Must(ValidateSubCodes).WithMessage("مقدار کدهای معین فقط می تواند عددهای صحیح جدا شده با(,) باشد");
         }
 
-        private bool ValidateCode(string Code)
+        private bool ValidateCode(string code)
         {
-            return int.TryParse(Code, out int _);
+            return int.TryParse(code, out int _);
         }
+
         private bool ValidateSubCodes(string Codes)
         {
             //check just (0 to 9 and ,) is valid
