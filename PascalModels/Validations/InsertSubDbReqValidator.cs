@@ -9,11 +9,11 @@ namespace PascalModels.Validations
         public InsertSubDbReqValidator()
         {
             RuleFor(x => x.GenCode).NotEmpty().NotNull().WithMessage("لطفا نام کل را وارد کنید")
-                                   .Length(4, 4).WithMessage("بیش از 6 کاراکتر مجاز نمی باشد")
+                                   .Length(4, 4).WithMessage("تعداد 4 کاراکتر مجاز می باشد")
                                    .Must(ValidateCode).WithMessage("مقدار کد کل فقط می تواند عدد صحیح باشد");
 
             RuleFor(x => x.SubCode).NotEmpty().NotNull().WithMessage("لطفا کد معین را وارد کنید")
-                                   .Length(6, 6).WithMessage("بیش از 10 کاراکتر مجاز نمی باشد")
+                                   .Length(6, 6).WithMessage("تعداد 6 کاراکتر مجاز می باشد")
                                    .Must(ValidateCode).WithMessage("مقدار کد معین فقط می تواند عدد صحیح باشد");
 
             RuleFor(x => x.SubName).NotEmpty().NotNull().WithMessage("لطفا نام معین را وارد کنید")
