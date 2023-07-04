@@ -10,7 +10,7 @@ namespace PascalModels.Validations
             RuleFor(x => x.DetCode)
                 .NotEmpty().NotNull().WithMessage("کد تفصیل نمی تواند خالی باشد")
                 .Length(4, 4).WithMessage("کد تفصیل باید 4 رقم باشد")
-                .Must(ValidateCode).WithMessage("مقدار کد تفصیل فقط می تواند عدد صحیح باشد");
+                .Must(ValidateCode).WithMessage("مقدار کد تفصیل فقط می تواند شامل اعداد باشد");
 
             RuleFor(x => x.DetName)
                 .NotEmpty().NotNull().WithMessage("نام تفصیل نمی تواند خالی باشد")
