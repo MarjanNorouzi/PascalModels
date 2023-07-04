@@ -8,6 +8,9 @@ namespace Personal_Information.Validators.SQLValidators
     {
         public FromDateToDateReqValidator()
         {
+            //فرمت تاریخ درست باشد
+            //هردو فیلد بازه مقداردهی شده باشد
+
             When(p =>
                      (p.FromDate is not null && p.ToDate is not null),
                      () =>
@@ -39,9 +42,12 @@ namespace Personal_Information.Validators.SQLValidators
 
     public class NumberDateFilterReqValidator : AbstractValidator<NumberDateFilterReq>
     {
+        //فقط یکی از بازه های تاریخ و یا شماره سند مقداردهی شده باشد
+
         public NumberDateFilterReqValidator()
         {
             var msg = "لطفا فقط یکی از موارد بازه تاریخ یا بازه شماره سند را مقداردهی کنید";
+            //"both must be filled('FromNum' And 'ToNum')or('FromDate' And 'ToDate')."
             When(p =>
                     p.NumFrom is not null && p.NumTo is not null
                     &&
@@ -55,7 +61,7 @@ namespace Personal_Information.Validators.SQLValidators
                         When(p => !(p.NumFrom.HasValue && p.NumTo.HasValue),
                         () =>
                         {
-                            RuleFor(x => x).NotEmpty().WithMessage(msg); //"both must be filled('FromNum' And 'ToNum')."
+                            RuleFor(x => x).NotEmpty().WithMessage(msg);
                         }).Otherwise(
                         () =>
                         {
