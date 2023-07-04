@@ -26,7 +26,7 @@ namespace Personal_Information.Validators.SQLValidators
                       (p.FromDate is not null && p.ToDate is not null && p.FromDate < p.ToDate),
                       () =>
                       {
-                          RuleFor(x => x).NotEmpty().WithMessage("بازه وارد شده صحیح نمی باشد");
+                          RuleFor(x => x).NotEmpty().WithMessage("شروع بازه 'تاریخ' نمی تواند از پایان آن بزرگتر باشد");
                       });
         }
 
@@ -67,8 +67,8 @@ namespace Personal_Information.Validators.SQLValidators
                             When(p => p.NumTo.HasValue && p.NumFrom.HasValue && p.NumFrom < p.NumTo,
                             () =>
                             {
-                                RuleFor(x => x.NumFrom).GreaterThan(1).WithMessage("بازه وارد شده برای شماره سند صحیح نمی باشد")
-                                    .LessThanOrEqualTo(x => x.NumTo).WithMessage("بازه وارد شده برای شماره سند صحیح نمی باشد");
+                                RuleFor(x => x.NumFrom).GreaterThan(1).WithMessage("شروع بازه 'شماره سند' نمی تواند از پایان آن بزرگتر باشد")
+                                    .LessThanOrEqualTo(x => x.NumTo).WithMessage("شروع بازه 'شماره سند' نمی تواند از پایان آن بزرگتر باشد");
                             }).Otherwise(() =>
                             {
                                 Include(new FromDateToDateReqValidator());
