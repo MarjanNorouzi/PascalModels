@@ -4,9 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace PascalModels.Validations
 {
-    public class InsertDetSubReqValidation : AbstractValidator<InsertDetSubReq>
+    public class InsertDetSubReqValidator : AbstractValidator<InsertDetSubReq>
     {
-        public InsertDetSubReqValidation()
+        public InsertDetSubReqValidator()
         {
             RuleFor(x => x.DetCode)
                 .NotEmpty().NotNull().WithMessage("کد تفصیل نمی تواند خالی باشد")
