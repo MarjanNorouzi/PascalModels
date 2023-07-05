@@ -12,7 +12,9 @@ namespace Pascal.EndPoint.Controllers
     public class GeneralsListReportReqsController : ControllerBase
     {
         /// <summary>لیست کل ها - بر اساس گروه</summary>
-        /// 
+        /// <param name="GeneralFrom" cref="string" in="header">param1</param>
+        /// <param name="GeneralTo" cref="string" in="header">param2</param>
+        /// <param in="body"><see cref="GeneralsListReportReq"></see>>requestt</param>
         /// <remarks>
         ///     <paramref name="request"></paramref>
         ///     <para><em>ورودی میگیرد GeneralsListReportReq یک</em></para>

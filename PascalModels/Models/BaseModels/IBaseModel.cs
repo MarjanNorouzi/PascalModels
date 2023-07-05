@@ -5,11 +5,11 @@
         //کدکمپانی
         //اجباری
         //باید دارای دو رقم باشد
-        public int CompanyCode { get; set; }
+        public string CompanyCode { get; set; }
         //سال مالی
         //اجباری
         //باید دارای دو رقم باشد
-        public int FinancialYear { get; set; }
+        public string FinancialYear { get; set; }
     }
 
     public record BaseModel
@@ -17,10 +17,10 @@
         //کدکمپانی
         //اجباری
         //باید دارای دو رقم باشد
-        public int CompanyCode { get; set; }
+        public string CompanyCode { get; set; }
         //سال مالی
         //اجباری
         //باید دارای دو رقم باشد
-        public int FinancialYear { get; set; }
+        public string FinancialYear { get; set; }
     }
 }

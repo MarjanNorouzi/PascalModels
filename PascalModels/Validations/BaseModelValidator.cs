@@ -14,9 +14,9 @@ namespace PascalModels.Validations
                                          .Must(NumberValidation).WithMessage("سال مالی باید دو رقمی باشد");
         }
 
-        private bool NumberValidation(int number)
+        private bool NumberValidation(string number)
         {
-            return number is < 100 and > 0;
+            return int.TryParse(number, out var result) && result is < 100 and > 0;
         }
     }
 }
