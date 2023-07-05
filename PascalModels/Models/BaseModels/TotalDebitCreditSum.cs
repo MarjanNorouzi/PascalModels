@@ -2,9 +2,9 @@
 {
     public record TotalDebitCreditSum
     {
-        //جمع بدهکاران
+        //جمع کل بدهکاران
         public decimal TotalSumOfDebit { get; set; }
-        //جمع بستانکاران
+        //جمع کل بستانکاران
         public decimal TotalSumOfCredit { get; set; }
     }
     public record TotalRemained : TotalDebitCreditSum
