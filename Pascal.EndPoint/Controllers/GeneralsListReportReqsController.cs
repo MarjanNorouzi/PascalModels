@@ -11,12 +11,16 @@ namespace Pascal.EndPoint.Controllers
     [ApiController]
     public class GeneralsListReportReqsController : ControllerBase
     {
+        // <param name="GeneralTo" cref="string" in="body">param2</param>
+        //    <paramref name="request"></paramref>
+        // <param name="request"  cref="GeneralsListReportReq"/>
+        // <param name="request" cref="GeneralsListReportReq" in="body" />
+
         /// <summary>لیست کل ها - بر اساس گروه</summary>
-        /// <param name="GeneralFrom" cref="string" in="header">param1</param>
-        /// <param name="GeneralTo" cref="string" in="header">param2</param>
-        /// <param in="body"><see cref="GeneralsListReportReq"></see>>requestt</param>
+        /// 
+        /// <value>property-description</value>
+
         /// <remarks>
-        ///     <paramref name="request"></paramref>
         ///     <para><em>ورودی میگیرد GeneralsListReportReq یک</em></para>
         ///     <para><returns>برمیگرداند IActionResult </returns></para>
         ///     <para>با استفاده از  کد گروه یک لیست از کل با جمع بدهکار و بستانکار و مانده برمیگردد</para> 
@@ -25,7 +29,7 @@ namespace Pascal.EndPoint.Controllers
         /// </remarks>
         [ServiceFilter(typeof(IActionFilter))]
         [HttpPost]
-        public IActionResult Requst([FromForm] GeneralsListReportReq request)
+        public IActionResult Requst([FromBody] GeneralsListReportReq request)
         {
             var header = Request.Headers["X-CustomHeader"];
             return Ok();
