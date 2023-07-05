@@ -5,6 +5,7 @@ namespace PascalModels.Validations
 {
     public class InsertSubDbReqValidator : AbstractValidator<InsertSubDbReq>
     {
+        //افزودن معین 
         //همه موارد(کد کل شامل 4 رقم)و(کد معین شامل 6 رقم)و(نام معین که شامل کاراکتر میباشد)و(نوع تفصیل) باید مقداردهی شوند
         public InsertSubDbReqValidator()
         {

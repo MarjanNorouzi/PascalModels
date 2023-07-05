@@ -8,7 +8,9 @@ namespace PascalModels.Validations
     {
         public SubListReportByGenCodeReqValidator()
         {
-            //کد کل نمیتواند خالی باشد، با استفاده از کد کل یک لیستی بر اساس کد معین بر  میگردد
+            //لیست معین بر اساس کد کل
+            //کد کل نمیتواند خالی باشد و همچنین باید شامل 4 رقم باشد
+            //با استفاده از کد کل یک لیست کد معین بر  میگردد
 
             RuleFor(x => x.GeneralCode)
                 .NotEmpty().WithMessage("کد کل را وارد کنید") //Insert 'GeneralCode'.

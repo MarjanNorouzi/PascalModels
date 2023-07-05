@@ -5,6 +5,7 @@ namespace PascalModels.Validations
 {
     public class InsertGenReqValidator : AbstractValidator<InsertGenReq>
     {
+        // افزودن کل
         public InsertGenReqValidator()
         {
             RuleFor(x => x.GroupCode)
