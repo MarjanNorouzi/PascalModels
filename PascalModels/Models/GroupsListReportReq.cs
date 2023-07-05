@@ -4,7 +4,11 @@ namespace PascalModels.Models
 {
     public record GroupsListReportReq : RemainedAccReq
     {
+        /// <summary>
+        /// از گروه
+        /// </summary>
         public string GroupFrom { get; set; }
+        
         public string GroupTo { get; set; }
         public int? GroupKind { get; set; }
     }

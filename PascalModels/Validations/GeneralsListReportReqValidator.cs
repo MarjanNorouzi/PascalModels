@@ -11,8 +11,8 @@ namespace PascalModels.Validations
             //بازه ی کد جنرال باید مشخص شود
             //با استفاده از بازه ی کد جنرال یک لیست بر  میگردد
 
-            RuleFor(x => x.GeneralFrom).NotEmpty().WithMessage("از کل' نمی تواند خالی باشد'")
-                .Length(4, 4).WithMessage("کد کل' باید 4 رقم باشد'")
+            RuleFor(x => x.GeneralFrom).NotEmpty().WithMessage("شروع 'کل' نمی تواند خالی باشد")
+                .Length(4, 4).WithMessage("کل' باید 4 رقم باشد'")
                 .Must(ValidateCode).WithMessage("مقدار 'از کل' فقط می تواند شامل اعداد باشد")
                 .LessThan(x => x.GeneralTo).WithMessage("شروع بازه 'کل' نمی تواند از پایان آن بزرگتر باشد"); //the selected range is incorrect.;
 
