@@ -1,4 +1,6 @@
-﻿namespace PascalModels.Models.BaseModels
+﻿using System.ComponentModel;
+
+namespace PascalModels.Models.BaseModels
 {
     public record FromDateToDateReq : BaseModel, IBaseModel
     {
@@ -12,6 +14,7 @@
     }
     public record RemainedAccReq : NumberDateFilterReq
     {
+        [DefaultValue(false)]
         public bool RemainedAcc { get; set; } = false;
     }
 }
