@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen(options =>
         if (File.Exists(xmlFilePath))
             options.IncludeXmlComments(xmlFilePath, includeControllerXmlComments: true);
     };
-    //options.OperationFilter<CustomHeaderAttribute>();
+    options.OperationFilter<CustomHeaderAttribute>();
 });
 
 
