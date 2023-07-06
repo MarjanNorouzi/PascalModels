@@ -16,8 +16,6 @@ namespace PascalModels.Models
         /// <para>اجباری</para> 
         /// </summary>
         public string GroupTo { get; set; }
-        //نوع گروه
-        //بین 1 تا 3 قابل انتخاب است و همچنین میتواند مقدار خالی رد شود  
         /// <summary>
         /// <para><em>اسم : نوع گروه</em></para> 
         /// <para>بین 1 تا 3 قابل انتخاب است و همچنین میتواند مقدار خالی رد شود </para> 

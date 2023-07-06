@@ -4,42 +4,65 @@ namespace PascalModels.Models
 {
     public record RemaiedReferReportReq : NumberDateFilterReq
     {
-        //کد تفصیل
-        //باید دارای 4 رقم باشد
+        /// <summary>
+        /// <para><em>اسم : کد تفصیل</em></para> 
+        /// <para>تعداد ارقام: 4</para> 
+        /// </summary>
         public string DetCode { get; set; }
-        //کد معین
-        //اجباری
-        //باید دارای 6 رقم باشد
-        //چهار رقم اول کد کلش را بیان میکند
+        /// <summary>
+        /// <para><em>اسم : کد معین</em></para> 
+        /// <para>تعداد ارقام: 6</para> 
+        /// <para>اجباری</para> 
+        /// <para>چهار رقم اول کد کلش را بیان میکند</para> 
+        /// </summary>
         public string SubCode { get; set; }
     }
     public record RemainedReferReportRes
     {
-        //آی دی
+        /// <summary>
+        /// <para><em>اسم : آی دی</em></para> 
+        /// </summary>
         public int ArtId { get; set; }
-        //شماره سند
+        /// <summary>
+        /// <para><em>اسم : شماره سند</em></para> 
+        /// </summary>
         public int SanadNo { get; set; }
-        //تاریخ
+        /// <summary>
+        /// <para><em>اسم : تاریخ</em></para> 
+        /// </summary>
         public DateTimeOffset DTNumDate { get; set; }
-        //عطف
-        //بیشترین تعداد کاراکتر 10 است
+        /// <summary>
+        /// <para><em>اسم : عطف</em></para> 
+        /// <para>حداکثر تعداد کاراکتر: 10</para> 
+        /// </summary>
         public string Refer { get; set; }
-        //بیشترین تعداد کاراکتر 50 است
+        /// <summary>
+        /// <para>حداکثر تعداد کاراکتر: 50</para> 
+        /// </summary>
         public string Exp { get; set; }
         //بدهکار
+        /// <summary>
+        /// <para><em>اسم : بدهکار</em></para> 
+        /// </summary>
         public decimal Debit { get; set; }
-        //بستانکار
+        /// <summary>
+        /// <para><em>اسم : بستانکار</em></para> 
+        /// </summary>
         public decimal Credit { get; set; }
-        //تشخیص
-        //باید دارای دو کاراکتر باشد
-        //بس'و'بد'و مقدار خالی را نشان میدهد' 
+        /// <summary>
+        /// <para><em>اسم : تشخیص</em></para> 
+        /// <para>تعداد کاراکتر: 2</para> 
+        /// <para>بس'و'بد'و مقدار خالی را نشان میدهد'</para> 
+        /// </summary>
         public string Tashkhis { get; set; }
     }
     public record RemainedReferReortTotalRes : TotalDebitCredit
     {
-        //تشخیص
-        //باید دارای دو کاراکتر باشد
-        //بس'و'بد'و مقدار خالی را نشان میدهد' 
+        /// <summary>
+        /// <para><em>اسم : تشخیص</em></para> 
+        /// <para>تعداد کاراکتر: 2</para> 
+        /// <para>بس'و'بد'و مقدار خالی را نشان میدهد'</para> 
+        /// </summary>
         public string Tashkhis { get; set; }
     }
 }

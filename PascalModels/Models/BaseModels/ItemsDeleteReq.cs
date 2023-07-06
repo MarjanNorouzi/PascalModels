@@ -2,8 +2,10 @@
 {
     public record ItemsDeleteReq
     {
-        //این کلاس برای پاک کردن همه آیتم ها استفاده میشود 
-        //آی دی
+        /// <summary>
+        /// <para><em>اسم : آی دی</em></para> 
+        /// <para>برای پاک کردن همه آیتم ها استفاده میشود</para> 
+        /// </summary>
         public IEnumerable<int> Ids { get; set; }
     }
 }
