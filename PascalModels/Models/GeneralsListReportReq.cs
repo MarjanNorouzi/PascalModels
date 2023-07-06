@@ -14,8 +14,6 @@ namespace PascalModels.Models
         /// <example>0102</example>
         [Required]
         [MinLength(4)]
-        [DisplayName("از کل")]
-        //[DefaultValue("0101")]
         public string GeneralFrom { get; set; }
 
         /// <summary>
@@ -26,7 +24,6 @@ namespace PascalModels.Models
         /// <example>0703</example>
         [Required]
         [MinLength(4)]
-        //[DefaultValue("0703")]
         public string GeneralTo { get; set; }
     }
 

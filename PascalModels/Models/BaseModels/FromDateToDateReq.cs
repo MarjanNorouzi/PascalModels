@@ -1,24 +1,39 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace PascalModels.Models.BaseModels
 {
     public record FromDateToDateReq : BaseModel, IBaseModel
     {
-        //از تاریخ
+        /// <summary>
+        /// <para>اسم : از تاریخ</para> 
+        /// <para>باید کوچکتر باشد 'ToDate' از </para> 
+        /// </summary>
         public DateTimeOffset? FromDate { get; set; }
-        //تا تاریخ
+        /// <summary>
+        /// <para>اسم : تا تاریخ</para> 
+        /// <para>باید بزرگتر باشد 'FromDate' از </para> 
+        /// </summary>
         public DateTimeOffset? ToDate { get; set; }
     }
     public record NumberDateFilterReq : FromDateToDateReq
     {
-        //از شماره سند
+        /// <summary>
+        /// <para>اسم : از شماره سند</para> 
+        /// </summary>
+        /// <example>1</example>
         public int? NumFrom { get; set; }
-        //تا شماره سند
+        /// <summary>
+        /// <para>اسم : تا شماره سند</para> 
+        /// </summary>
+        /// <example>700</example>
         public int? NumTo { get; set; }
     }
     public record RemainedAccReq : NumberDateFilterReq
     {
-        //مانده حساب
+        /// <summary>
+        /// <para>اسم : مانده حساب</para> 
+        /// </summary>
         [DefaultValue(false)]
         public bool RemainedAcc { get; set; } = false;
     }

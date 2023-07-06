@@ -34,10 +34,24 @@ namespace Pascal.EndPoint.Filters
                     var errors = result.Errors.Select(x => x.ErrorMessage);
                     context.Result = new BadRequestObjectResult(errors);
                 }
-                //context.Result = new OkObjectResult("OK");
             }
-            //else
-            //    context.Result = new BadRequestObjectResult("Validator is not Valid");
+        }
+
+        public void OnActionExecuted(ActionExecutedContext context)
+        {
+        }
+    }
+
+    public class TempAttribute : IActionFilter
+    {
+
+        public TempAttribute()
+        {
+        }
+
+        public void OnActionExecuting(ActionExecutingContext context)
+        {
+            
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
