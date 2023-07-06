@@ -9,21 +9,19 @@ namespace PascalModels.Models
         /// <summary>
         /// <para>اسم : از کل</para> 
         /// <para>باید کوچکتر باشد 'GeneralTo' از </para> 
+        /// <para>اجباری</para> 
         /// <para>تعداد ارقام: 4</para> 
         /// </summary>
         /// <example>0102</example>
-        [Required]
-        [MinLength(4)]
         public string GeneralFrom { get; set; }
 
         /// <summary>
         /// <para>اسم : تا کل</para> 
         /// <para>باید بزرگتر باشد 'GeneralFrom' از </para> 
+        /// <para>اجباری</para> 
         /// <para>تعداد ارقام: 4</para> 
         /// </summary>
         /// <example>0703</example>
-        [Required]
-        [MinLength(4)]
         public string GeneralTo { get; set; }
     }
 
