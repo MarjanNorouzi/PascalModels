@@ -5,10 +5,12 @@ namespace PascalModels.Validations
 {
     public class DetailsListBySubCodeReqValidator : AbstractValidator<DetailsListBySubCodeReq>
     {
-        //لیست تفصیل
-        //با استفاده از  کد معین یک لیست از تفصیل با جمع بدهکار و بستانکار و مانده برمیگردد
-        //کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد
-        //دارای فیلتر حساب های مانده دار نیز می باشد
+        /// <summary>
+        /// <para><em>اسم : لیست تفصیل</em></para> 
+        /// <para>با استفاده از  کد معین یک لیست از تفصیل با جمع بدهکار و بستانکار و مانده برمیگردد</para> 
+        /// <para>کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد</para> 
+        /// <para>دارای فیلتر حساب های مانده دار نیز می باشدد</para> 
+        /// </summary>
         public DetailsListBySubCodeReqValidator()
         {
             Include(new NumberDateFilterReqValidator());

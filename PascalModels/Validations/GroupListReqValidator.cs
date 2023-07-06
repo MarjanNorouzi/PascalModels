@@ -5,12 +5,14 @@ namespace Personal_Information.Validators.SQLValidators
 {
     public class GroupListReqValidator : AbstractValidator<GroupsListReportReq>
     {
-        //گزارش گروه ها
-        //بازه کد گروه باید مشخص شود
-        //فقط یکی از بازه های شماره سند و یا تاریخ باید مشخص شود
-        //کدهای مقداردهی شده در بازه ی گروه باید شامل دو رقم باشد
-        //نوع گروه خارج از بازه ی 1 تا 3 مجاز نمی باشد
-        //دارای فیلتر حساب های مانده دار نیز می باشد
+        /// <summary>
+        /// <para><em>گزارش گروه ها</em></para>
+        /// <para>فقط یکی از بازه های شماره سند و یا تاریخ باید مشخص شود</para> 
+        /// <para>بازه ی کد گروه باید مشخص شود</para> 
+        /// <para>کدهای مقداردهی شده در بازه ی گروه باید شامل دو رقم باشد</para> 
+        /// <para>نوع گروه خارج از بازه ی 1 تا 3 مجاز نمی باشد</para> 
+        /// <para>دارای فیلتر حساب های مانده دار نیز می باشد</para> 
+        /// </summary>
         public GroupListReqValidator()
         {
             RuleFor(x => x.GroupFrom).Length(2, 2).WithMessage("کد گروه' باید 2 رقم باشد'")

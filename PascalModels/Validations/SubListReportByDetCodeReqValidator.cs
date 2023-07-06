@@ -8,9 +8,11 @@ namespace PascalModels.Validations
     {
         public SubListReportByDetCodeReqValidator()
         {
-            //لیست معین بر اساس تفصیل
-            //کد تفصیل نمیتواند خالی باشد و همچنین باید شامل 4 رقم باشد
-            //با استفاده از کد تفصیل یک لیست بر اساس کد معین بر  میگردد
+            /// <summary>
+            /// <para><em>لیست معین بر اساس تفصیل </em></para>
+            /// <para>با استفاده از کد تفصیل یک لیست بر اساس کد معین بر  میگردد</para> 
+            /// <para>کد تفصیل نمیتواند خالی باشد و همچنین باید شامل 4 رقم باشد</para>
+            /// </summary>
 
             RuleFor(x => x.DetCode)
                 .NotEmpty().WithMessage("'کد تفصیل' نمیتواند خالی باشد") //Insert 'DetCode'.

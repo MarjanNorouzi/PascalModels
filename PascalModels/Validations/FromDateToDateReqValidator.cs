@@ -8,9 +8,12 @@ namespace Personal_Information.Validators.SQLValidators
     {
         public FromDateToDateReqValidator()
         {
-            //فرمت تاریخ درست باشد
-            //شروع بازه از پایان آن نمیتواند بزرگتر باشد
-            //هردو فیلد بازه باید مقداردهی شود
+            /// <summary>
+            /// <para><em>اسم : محدوده تاریخ</em></para> 
+            /// <para>فرمت تاریخ درست باشد</para> 
+            /// <para>شروع بازه از پایان آن نمیتواند بزرگتر باشد</para> 
+            /// <para>هردو فیلد بازه باید مقداردهی شود</para> 
+            /// </summary>
 
             When(p =>
                      (p.FromDate is not null && p.ToDate is not null),
@@ -42,9 +45,12 @@ namespace Personal_Information.Validators.SQLValidators
 
     public class NumberDateFilterReqValidator : AbstractValidator<NumberDateFilterReq>
     {
-        //فقط  باید یکی از بازه های تاریخ و یا شماره سند مقداردهی شود
-        //هردو فیلد بازه باید مقداردهی شود
-        //شروع بازه از پایان آن نمیتواند بزرگتر باشد
+        /// <summary>
+        /// <para><em>اسم : محدوده شماره سند</em></para> 
+        /// <para>فقط  باید یکی از بازه های تاریخ و یا شماره سند مقداردهی شود</para> 
+        /// <para>شروع بازه از پایان آن نمیتواند بزرگتر باشد</para> 
+        /// <para>هردو فیلد بازه باید مقداردهی شود</para> 
+        /// </summary>
 
         public NumberDateFilterReqValidator()
         {

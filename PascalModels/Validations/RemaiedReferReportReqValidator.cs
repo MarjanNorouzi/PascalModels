@@ -8,10 +8,11 @@ namespace PascalModels.Validations
     {
         public RemaiedReferReportReqValidator()
         {
-            //گزارش مانده عطف
-            //کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد
-            //کد تفصیل اختیاری میباشد
-            //با استفاده از کد معین و تفصیل لیست مانده عطف برمیگردد
+            /// <summary>
+            /// <para><em>گزارش مانده عطف </em></para>
+            /// <para>کد تفصیل اختیاری میباشد</para> 
+            /// <para>با استفاده از کد معین و تفصیل لیست مانده عطف برمیگردد </para>
+            /// </summary>
 
             RuleFor(x => x.SubCode)
                 .NotEmpty().WithMessage("کد معین نمی تواند خالی باشد") //'SubCode' Can't Be Null.

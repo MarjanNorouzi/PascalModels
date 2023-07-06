@@ -5,8 +5,10 @@ namespace PascalModels.Validations
 {
     public class InsertGrDbReqValidator : AbstractValidator<InsertGrDbReq>
     {
-        //افزودن گروه
-        //همه موارد(کد گروه شامل 2 عدد)و(نام گروه که شامل کاراکتر میباشد)و(نوع گروه) باید مقداردهی شوند
+        /// <summary>
+        /// <para><em>افزودن گروه</em></para>
+        /// <para>همه موارد(کد گروه شامل 2 عدد)و(نام گروه که شامل کاراکتر میباشد)و(نوع گروه) باید مقداردهی شوند</para> 
+        /// </summary>
         public InsertGrDbReqValidator()
         {
             RuleFor(x => x.GrCode).NotEmpty().NotNull().WithMessage("لطفا کد گروه را وارد کنید")

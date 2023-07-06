@@ -6,9 +6,11 @@ namespace PascalModels.Validations
 {
     public class TurnoverBySubCodeReqValidator : AbstractValidator<TurnoverBySubCodeReq>
     {
-        //گردش حساب
-        //کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد
-        //فقط یکی از بازه های شماره سند و یا تاریخ باید مشخص شود
+        /// <summary>
+        /// <para><em>گردش حساب</em></para>
+        /// <para>کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد</para> 
+        /// <para>فقط یکی از بازه های شماره سند و یا تاریخ باید مشخص شود</para>
+        /// </summary>
 
         public TurnoverBySubCodeReqValidator()
         {

@@ -8,10 +8,12 @@ namespace PascalModels.Validations
     {
         public SubListReportByDetAndSubCodeReqValidator()
         {
-            //لیست معین بر اساس معین و تفصیل 
-            //با استفاده از کد معین و تفصیل گزارش معین بر میگردد
-            //کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد
-            //کد تفصیل اختیاری میباشد
+            /// <summary>
+            /// <para><em>لیست معین بر اساس معین و تفصیل  </em></para>
+            /// <para>با استفاده از کد معین و تفصیل گزارش معین بر میگردد</para> 
+            /// <para>کد معین نمیتواند خالی باشد و همچنین باید شامل 6 رقم باشد</para>
+            /// <para>کد تفصیل اختیاری میباشد</para> 
+            /// </summary>
 
             RuleFor(x => x.SubCode)
                          .NotEmpty().WithMessage("کد معین نمی تواند خالی باشد")
