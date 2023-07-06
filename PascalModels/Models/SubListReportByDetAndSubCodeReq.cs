@@ -22,7 +22,6 @@ namespace PascalModels.Models
         /// <summary>
         /// <para><em>اسم : مانده</em></para> 
         /// <para>تعداد ارقام: 6</para> 
-        /// <para>اجباری</para> 
         /// <para>چهار رقم اول کد کلش را بیان میکند</para> 
         /// </summary>
         public decimal Remained { get; set; }

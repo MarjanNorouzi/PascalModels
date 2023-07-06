@@ -58,5 +58,4 @@ namespace Pascal.EndPoint.Filters
         {
         }
     }
-
 }

@@ -26,8 +26,6 @@ namespace Pascal.EndPoint.Controllers
         [HttpPost]
         public IActionResult Requst(GeneralsListReportReq request)
         {
-            var qq = DateTimeOffset.Now;
-
             var header = Request.Headers["X-CustomHeader"];
             return Ok();
         }

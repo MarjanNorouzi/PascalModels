@@ -23,12 +23,14 @@
         /// <para>تعداد ارقام: 2</para> 
         /// <para>اجباری</para> 
         /// </summary>
+        /// <example>01</example>
         public string CompanyCode { get; set; }
         /// <summary>
         /// <para><em>اسم : سال مالی</em></para> 
         /// <para>تعداد ارقام: 2</para> 
         /// <para>اجباری</para> 
         /// </summary>
+        /// <example>01</example>
         public string FinancialYear { get; set; }
     }
 }

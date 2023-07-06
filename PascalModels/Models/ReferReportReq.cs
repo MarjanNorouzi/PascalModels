@@ -23,7 +23,6 @@ namespace Personal_Information.Models.ProcModels
         /// <para>حداکثر تعداد کاراکتر: 10</para> 
         /// </summary>
         public string Refer { get; set; }
-
     }
 
     public record ReferReportRes : RemainedReferReportRes

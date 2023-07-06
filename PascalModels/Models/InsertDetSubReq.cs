@@ -22,6 +22,7 @@
     {
         /// <summary>
         /// <para><em>اسم : آی دی</em></para> 
+        /// <para>اجباری</para> 
         /// </summary>
         public int DetSubId { get; set; }
     }

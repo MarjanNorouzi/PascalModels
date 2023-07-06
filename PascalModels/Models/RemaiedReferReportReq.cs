@@ -40,7 +40,6 @@ namespace PascalModels.Models
         /// <para>حداکثر تعداد کاراکتر: 50</para> 
         /// </summary>
         public string Exp { get; set; }
-        //بدهکار
         /// <summary>
         /// <para><em>اسم : بدهکار</em></para> 
         /// </summary>

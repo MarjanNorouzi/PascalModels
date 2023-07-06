@@ -12,7 +12,6 @@ namespace PascalModels.Models
         /// <para>اجباری</para> 
         /// <para>تعداد ارقام: 4</para> 
         /// </summary>
-        /// <example>0102</example>
         public string GeneralFrom { get; set; }
 
         /// <summary>
@@ -21,7 +20,6 @@ namespace PascalModels.Models
         /// <para>اجباری</para> 
         /// <para>تعداد ارقام: 4</para> 
         /// </summary>
-        /// <example>0703</example>
         public string GeneralTo { get; set; }
     }
 
@@ -32,14 +30,12 @@ namespace PascalModels.Models
         /// <para>تعداد ارقام: 4</para> 
         /// <para>دو رقم اول کد گروهش را بیان میکند</para> 
         /// </summary>
-        [DefaultValue("0101")]
         public string GeneralCode { get; set; }
 
         /// <summary>
         /// <para><em>اسم : نام کل</em></para> 
         /// <para>بیشترین تعداد کاراکتر 50 است</para> 
         /// </summary>
-        [DefaultValue("موجوديهاي نقد و بانک")]
         public string GeneralName { get; set; }
     }
     public record GeneralsListReportTotalRes : TotalRemained

@@ -15,7 +15,6 @@ public record GeneralsListReportByGrCodeRes : DebitCreditSum
     /// <summary>
     /// <para><em>اسم : کد کل</em></para> 
     /// <para>تعداد ارقام: 4</para> 
-    /// <para>اجباری</para> 
     /// <para>دو رقم اول کد گروهش را بیان میکند</para> 
     /// </summary>
     public int GenCode { get; set; }
