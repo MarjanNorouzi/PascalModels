@@ -2,25 +2,33 @@
 {
     public interface IBaseModel
     {
-        //کدکمپانی
-        //اجباری
-        //باید دارای دو رقم باشد
+        /// <summary>
+        /// <para><em>اسم : کد کمپانی</em></para> 
+        /// <para>تعداد ارقام: 2</para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public string CompanyCode { get; set; }
-        //سال مالی
-        //اجباری
-        //باید دارای دو رقم باشد
+        /// <summary>
+        /// <para><em>اسم : سال مالی</em></para> 
+        /// <para>تعداد ارقام: 2</para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public string FinancialYear { get; set; }
     }
 
     public record BaseModel
     {
-        //کدکمپانی
-        //اجباری
-        //باید دارای دو رقم باشد
+        /// <summary>
+        /// <para><em>اسم : کد کمپانی</em></para> 
+        /// <para>تعداد ارقام: 2</para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public string CompanyCode { get; set; }
-        //سال مالی
-        //اجباری
-        //باید دارای دو رقم باشد
+        /// <summary>
+        /// <para><em>اسم : سال مالی</em></para> 
+        /// <para>تعداد ارقام: 2</para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public string FinancialYear { get; set; }
     }
 }

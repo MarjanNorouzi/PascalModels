@@ -4,19 +4,25 @@ namespace PascalModels.Models
 {
     public record SubListReportByDetCodeReq : RemainedAccReq
     {
-        //کد تفصیل
-        //اجباری
-        //باید دارای 4 رقم باشد
+        /// <summary>
+        /// <para><em>اسم : کد تفصیل</em></para> 
+        /// <para>تعداد ارقام: 4</para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public string DetCode { get; set; }
     }
     public record SubListReportByDetCodeRes : Remained
     {
-        //کد معین
-        //باید دارای 6 رقم باشد
-        //چهار رقم اول کد کلش را بیان میکند
+        /// <summary>
+        /// <para><em>اسم : کد معین</em></para> 
+        /// <para>تعداد ارقام: 6</para> 
+        /// <para>چهار رقم اول کد کلش را بیان میکند</para> 
+        /// </summary>
         public string SubCode { get; set; }
-        //نام معین
-        //بیشترین تعداد کاراکتر 50 است
+        /// <summary>
+        /// <para><em>اسم : نام معین</em></para> 
+        /// <para>حداکثر تعداد کاراکتر: 50</para> 
+        /// </summary>
         public string SubName { get; set; }
         public bool HasDetail { get; set; }
     }

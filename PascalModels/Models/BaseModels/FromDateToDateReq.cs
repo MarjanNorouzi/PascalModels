@@ -20,11 +20,13 @@ namespace PascalModels.Models.BaseModels
     {
         /// <summary>
         /// <para>اسم : از شماره سند</para> 
+        /// <para>باید کوچکتر باشد 'NumTo' از </para> 
         /// </summary>
         /// <example>1</example>
         public int? NumFrom { get; set; }
         /// <summary>
         /// <para>اسم : تا شماره سند</para> 
+        /// <para>باید کوچکتر باشد 'NumFrom' از </para> 
         /// </summary>
         /// <example>700</example>
         public int? NumTo { get; set; }

@@ -2,25 +2,33 @@
 {
     public record InsertGrDbReq
     {
-        //کدگروه
-        //اجباری
-        //کد مقداردهی شده تکراری نباشد
-        //باید دارای 2 رقم باشد
+        /// <summary>
+        /// <para><em>اسم : کدگروه</em></para> 
+        /// <para>تعداد ارقام: 2</para> 
+        /// <para>اجباری</para> 
+        /// <para>کد مقداردهی شده تکراری نباشد</para> 
+        /// </summary>
         public string GrCode { get; set; }
-        //نام گروه
-        //اجباری
-        //بیشترین تعداد کاراکتر 50 است
+        /// <summary>
+        /// <para><em>اسم : نام گروه</em></para> 
+        /// <para>حداکثر تعداد کاراکتر: 50</para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public string GrName { get; set; }
-        //نوع گروه
-        //اجباری
+        /// <summary>
+        /// <para><em>اسم : نوع گروه</em></para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public int Grkind { get; set; }
 
     }
 
     public record EditGrDbReq : InsertGrDbReq
     {
-        //آی دی گروه
-        //اجباری
+        /// <summary>
+        /// <para><em>اسم : آی دی گروه</em></para> 
+        /// <para>اجباری</para> 
+        /// </summary>
         public int GrId { get; set; }
     }
 

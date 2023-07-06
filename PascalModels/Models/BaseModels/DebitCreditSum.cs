@@ -2,17 +2,25 @@
 {
     public record DebitCreditSum
     {
-        //جمع بدهکار
+        /// <summary>
+        /// <para><em>اسم : جمع بدهکار</em></para> 
+        /// </summary>
         public decimal SumOfDebit { get; set; }
-        //جمع بستانکار
+        /// <summary>
+        /// <para><em>اسم : جمع بستانکار</em></para> 
+        /// </summary>
         public decimal SumOfCredit { get; set; }
     }
 
     public record Remained : DebitCreditSum
     {
-        //مانده بدهکار
+        /// <summary>
+        /// <para><em>اسم : مانده بدهکار</em></para> 
+        /// </summary>
         public decimal RemainedDebit { get; set; }
-        //مانده بستانکار
+        /// <summary>
+        /// <para><em>اسم : مانده بستانکار</em></para> 
+        /// </summary>
         public decimal RemainedCredit { get; set; }
     }
 }
