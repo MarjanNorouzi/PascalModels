@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Pascal.EndPoint.Filters;
 using PascalModels.Models;
 
 namespace Pascal.EndPoint.Controllers
@@ -21,6 +22,7 @@ namespace Pascal.EndPoint.Controllers
         ///     <para>دارای فیلتر حساب های مانده دار نیز می باشد</para> 
         /// </remarks>
         [ServiceFilter(typeof(IActionFilter))]
+        [ServiceFilter(typeof(TempAttribute))]
         [HttpPost]
         public IActionResult Requst(GeneralsListReportReq request)
         {

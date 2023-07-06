@@ -51,11 +51,12 @@ namespace Pascal.EndPoint.Filters
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            
+            var vv = context.ActionDescriptor.Parameters;
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
         }
     }
+
 }

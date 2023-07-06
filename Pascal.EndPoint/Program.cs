@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddValidatorsFromAssemblyContaining<GeneralsListReportByGrCodeReqValidator>();
 builder.Services.AddScoped<IActionFilter, ValidateRequestAttribute>();
-builder.Services.AddScoped<IActionFilter, TempAttribute>();
+builder.Services.AddScoped<TempAttribute>();
 
 var app = builder.Build();
 
