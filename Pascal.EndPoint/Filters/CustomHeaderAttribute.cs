@@ -1,8 +1,6 @@
 ﻿using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Extensions;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Xml.Linq;
 
 namespace Pascal.EndPoint.Filters
 {
@@ -11,7 +9,6 @@ namespace Pascal.EndPoint.Filters
     public class CustomHeaderAttribute : IOperationFilter
     {
         /// <summary>
-        /// نمایش داده نمیشود
         /// </summary>
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
@@ -28,25 +25,6 @@ namespace Pascal.EndPoint.Filters
                     Default = new OpenApiString("foobar"),
                     Type = "string"
                 }
-            });
-        }
-    }
-
-    public class ApiParameters : IOperationFilter
-    {
-        public void Apply(OpenApiOperation operation, OperationFilterContext context)
-        {
-            //<form action="http://example.com/survey" method="post">
-            // < input type = "text"   name = "name" />
-            // < input type = "number" name = "fav_number" />
-            // < input type = "submit" />
-            //</ form >
-            if (operation.Parameters == null)
-                operation.Parameters = new List<OpenApiParameter>();
-
-            operation.Parameters.Add(new OpenApiParameter
-            {
-                
             });
         }
     }

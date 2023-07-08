@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalInformation", "PersonalInformation\PersonalInformation.csproj", "{A220D0FE-1A7F-462F-BC1F-0771B31A7453}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PascalModels", "PascalModels\PascalModels.csproj", "{52325609-C5B7-484B-BB33-A2B3F922876A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B8D6420-3841-4FB9-A415-735875B19670}"
@@ -12,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pascal.EndPoint", "Pascal.EndPoint\Pascal.EndPoint.csproj", "{EE1453EC-D715-4483-A5C3-D185A24F2994}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pascal.EndPoint", "Pascal.EndPoint\Pascal.EndPoint.csproj", "{EE1453EC-D715-4483-A5C3-D185A24F2994}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +18,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A220D0FE-1A7F-462F-BC1F-0771B31A7453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A220D0FE-1A7F-462F-BC1F-0771B31A7453}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A220D0FE-1A7F-462F-BC1F-0771B31A7453}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A220D0FE-1A7F-462F-BC1F-0771B31A7453}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52325609-C5B7-484B-BB33-A2B3F922876A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52325609-C5B7-484B-BB33-A2B3F922876A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52325609-C5B7-484B-BB33-A2B3F922876A}.Release|Any CPU.ActiveCfg = Release|Any CPU

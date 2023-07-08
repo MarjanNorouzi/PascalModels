@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Pascal.EndPoint.Filters;
 using PascalModels.Models;
 
 namespace Pascal.EndPoint.Controllers
@@ -13,16 +12,13 @@ namespace Pascal.EndPoint.Controllers
     public class GeneralsListReportReqsController : ControllerBase
     {
         /// <summary>لیست کل ها - بر اساس گروه</summary>
-
         /// <remarks>
-        ///     <para><em>ورودی میگیرد GeneralsListReportReq یک</em></para>
-        ///     <para><returns>برمیگرداند IActionResult </returns></para>
-        ///     <para>با استفاده از  کد گروه یک لیست از کل با جمع بدهکار و بستانکار و مانده برمیگردد</para> 
-        ///     <para>کد گروه نمیتواند خالی باشد و همچنین باید شامل 2 رقم باشد</para> 
+        ///     <para>ورودی میگیرد GeneralsListReportReq یک</para>
+        ///     <para>با استفاده از  بازه ی کل یک لیست از کل با جمع بدهکار و بستانکار و مانده برمیگردد</para> 
+        ///     <para>کد کل نمیتواند خالی باشد و همچنین باید 4 رقم باشد</para> 
         ///     <para>دارای فیلتر حساب های مانده دار نیز می باشد</para> 
         /// </remarks>
         [ServiceFilter(typeof(IActionFilter))]
-        [ServiceFilter(typeof(TempAttribute))]
         [HttpPost]
         public IActionResult Requst(GeneralsListReportReq request)
         {
