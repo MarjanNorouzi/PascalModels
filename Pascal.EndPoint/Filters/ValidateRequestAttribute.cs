@@ -30,7 +30,7 @@ namespace Pascal.EndPoint.Filters
             {
                 var result = await validator.ValidateAsync(validationContext);
 
-                if (result.IsValid)
+                if (!result.IsValid)
                 {
                     var errors = result.Errors.Select(x => x.ErrorMessage);
                     context.Result = new BadRequestObjectResult(errors);
