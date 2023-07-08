@@ -62,14 +62,14 @@ namespace Personal_Information.Validators.SQLValidators
                     p.FromDate is not null && p.ToDate is not null,
                 () =>
                 {
-                    RuleFor(x => x).NotEmpty().WithMessage(msg);
+                    RuleFor(x => x).Empty().WithMessage(msg);
                 }).Otherwise(
                     () =>
                     {
                         When(p => !(p.NumFrom.HasValue && p.NumTo.HasValue),
                         () =>
                         {
-                            RuleFor(x => x).NotEmpty().WithMessage(msg);
+                            RuleFor(x => x).Empty().WithMessage(msg);
                         }).Otherwise(
                         () =>
                         {
