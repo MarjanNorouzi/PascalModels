@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Pascal.EndPoint.Filters
 {
@@ -29,11 +30,12 @@ namespace Pascal.EndPoint.Filters
             {
                 var result = await validator.ValidateAsync(validationContext);
 
-                if (!result.IsValid)
+                if (result.IsValid)
                 {
                     var errors = result.Errors.Select(x => x.ErrorMessage);
                     context.Result = new BadRequestObjectResult(errors);
                 }
+                    
             }
         }
 
