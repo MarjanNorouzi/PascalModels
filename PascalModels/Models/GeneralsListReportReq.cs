@@ -1,6 +1,4 @@
 ﻿using PascalModels.Models.BaseModels;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 
 namespace PascalModels.Models
 {
@@ -12,6 +10,7 @@ namespace PascalModels.Models
         /// <para>اجباری</para> 
         /// <para>تعداد ارقام: 4</para> 
         /// </summary>
+        /// <example>0101</example>
         public string GeneralFrom { get; set; }
 
         /// <summary>
@@ -20,6 +19,7 @@ namespace PascalModels.Models
         /// <para>اجباری</para> 
         /// <para>تعداد ارقام: 4</para> 
         /// </summary>
+        /// <example>0701</example>
         public string GeneralTo { get; set; }
     }
 
