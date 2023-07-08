@@ -41,21 +41,4 @@ namespace Pascal.EndPoint.Filters
         {
         }
     }
-
-    public class TempAttribute : IActionFilter
-    {
-
-        public TempAttribute()
-        {
-        }
-
-        public void OnActionExecuting(ActionExecutingContext context)
-        {
-            var vv = context.ActionDescriptor.Parameters;
-        }
-
-        public void OnActionExecuted(ActionExecutedContext context)
-        {
-        }
-    }
 }
